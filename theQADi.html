@@ -52,6 +52,13 @@
       .details .qad{
         font-weight: bold;
       }
+
+      .name,
+      .email,
+      .subject{
+        width: 100%;
+        max-width: 500px;
+      }
      </style>
 </head>
 <body >
@@ -194,7 +201,7 @@
                   <h3>Feedback</h3>
                   <p>For comments, suggestions, queries, and further information:</p>
                   <p class="qad">Quality Assurance Division</p>
-                  <p>DepEd NCR, Misamis St. Bago Bantay, Quezon City</p>
+                  <p>DepEd NCR, Misamis St., Bago Bantay, Quezon City</p>
                   <p>(+63-2) 9821 5630</p>
                   <p>qad.ncr@deped.gov.ph</p>
                 </div>
@@ -203,15 +210,15 @@
                   <div class="col-md-12">
                     <div class="mb-3">
                       <label for="Name" class="form-label fw-bold">Name <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control"  id="Name" aria-describedby="emailHelp" required>
+                      <input type="text" class="form-control name"  id="Name" aria-describedby="emailHelp" required>
                     </div>
                     <div class="mb-3">
                       <label for="Email" class="form-label fw-bold">Email <span class="text-danger">*</span> </label>
-                      <input type="Email" class="form-control" id="Email"  required>
+                      <input type="Email" class="form-control email" id="Email"  required>
                     </div>
                     <div class="mb-3">
                       <label for="Subject" class="form-label fw-bold">Subject <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="Subject" required>
+                      <input type="text" class="form-control subject" id="Subject" required>
                     </div>
                     <label for="" class="form-label fw-bold">Type Of Concern (Please Choose One)</label>
                     <div class="mb-2 form-check">
