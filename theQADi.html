@@ -188,29 +188,30 @@
 
           </div> -->
           <div class="container pt-4 pb-5 px-4 px-xl-0">
-            <div class="row">
-              <div class="col-lg-12 col-xl-6">
+            <div class="row pb-5">
+              <div class="col-lg-12 col-xl-12">
                 <div class="details">
                   <h3>Feedback</h3>
                   <p>For comments, suggestions, queries, and further information:</p>
                   <p class="qad">Quality Assurance Division</p>
                   <p>DepEd NCR, Misamis St. Bago Bantay, Quezon City</p>
                   <p>(+63-2) 9821 5630</p>
+                  <p>qad.ncr@deped.gov.ph</p>
                 </div>
           
                 <form class="qadform">
-                  <div class="col-md-5">
+                  <div class="col-md-12">
                     <div class="mb-3">
-                      <label for="Name" class="form-label fw-bold">Name</label>
-                      <input type="text" class="form-control" placeholder="Juan Dela Cruz" id="Name" aria-describedby="emailHelp" >
+                      <label for="Name" class="form-label fw-bold">Name <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control"  id="Name" aria-describedby="emailHelp" required>
                     </div>
                     <div class="mb-3">
                       <label for="Email" class="form-label fw-bold">Email <span class="text-danger">*</span> </label>
-                      <input type="Email" class="form-control" id="Email" placeholder="JuanDelaCruz@gmail.com" required>
+                      <input type="Email" class="form-control" id="Email"  required>
                     </div>
                     <div class="mb-3">
-                      <label for="Subject" class="form-label fw-bold">Subject</label>
-                      <input type="text" class="form-control" placeholder="Inquiry" id="Subject" >
+                      <label for="Subject" class="form-label fw-bold">Subject <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="Subject" required>
                     </div>
                     <label for="" class="form-label fw-bold">Type Of Concern (Please Choose One)</label>
                     <div class="mb-2 form-check">
@@ -237,9 +238,9 @@
                       <label for="Concern" class="form-label fw-bold">Other Concern</label>
                       <input type="text" class="form-control" id="Concern" required>
                     </div>
-                    <label for="" class="form-label fw-bold">Message</label>
+                    <label for="" class="form-label fw-bold">Message <span class="text-danger">*</span></label>
                     <div class="form-floating mb-3">
-                      <textarea class="form-control" placeholder="" id="floatingTextarea2" style="height: 100px"></textarea>
+                      <textarea class="form-control" placeholder="" id="floatingTextarea2" style="height: 100px" required></textarea>
                       <!-- <label for="floatingTextarea2">Comments</label> -->
                     </div>
     
@@ -248,70 +249,11 @@
      
                 </form>
               </div>
-              <div class="col-lg-12 col-xl-6 d-flex flex-column right mt-3 mt-xl-0">
-            
-                <!-- <div class="chatbot_container">
-                  <div class="chatbot_start">
-                    <div class="chatbot_start_wrapper">
-                        <img src="./img/Untitled48_20221006094251.png" alt="">
-                        <span class="click_me">
-                          <h3>Hi There!</h3> 
-                          <h3>Click to Chat with us</h3>                   
+           
 
-                        </span>
-                    </div>
-  
-                  </div> -->
-
-                  <!-- <div class="chatbot_header">
-                    <img src="./img/Untitled48_20221006094251.png" alt="">
-                    <p>Hi there! Welcome to QAD</p>
-                  </div>
-                  <div class="chatbot_body">
-                    <div class="myspan"> -->
-                      <!-- <div class="bot_message hide">
-                        <span class="bot">
-                          Good Day
-                        </span>
-                      </div>
-                      <div class="bot_message hide">
-                        
-                        <span class="bot">
-                          How can I help you
-                        </span>
-                      </div>
-                      <div class="choices hide d-flex flex-column align-items-start">
-                        <span class="choices_span">What is QAD</span>
-                        <span class="choices_span">Services offered by QAD</span>
-                        <span class="choices_span">Issuances</span>
-                        <span class="choices_span">Downloadable Forms</span>
-                        <span class="choices_span">Send us Feedback</span>
-                      </div> -->
-                   
-                      <!-- <div class="message_wrapper">
-                        
-                      
-                      </div>
-                      <div class="snippet" data-title=".dot-typing">
-                        <div class="stage">
-                          <div class="dot-typing"></div>
-                        </div>
-                      </div>
-                    </div>
-              
-                  </div>
-                  <div class="submit_wrapper">
-                    <form id="messageForm">
-                      <input class="text" id="userMessage"type="text" placeholder="Enter Your Message..." autocomplete="off" required>
-                      <input class="button" type="submit" value="Send">
-                    </form>
-                  </div>
-                </div> -->
-                <div class="map_wrapper  border border-1 mt-auto mb-5">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.9629113044025!2d121.02656901484093!3d14.6580462897659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b6e39d622f61%3A0x91c5f879df0a26f4!2sDepartment%20of%20Education%20-%20NCR%20Regional%20Office!5e0!3m2!1sen!2sph!4v1664782091443!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
-
-                </div>
-              </div>
+            </div>
+            <div class="map_wrapper  border border-1 mt-auto mb-2">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.9629113044025!2d121.02656901484093!3d14.6580462897659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b6e39d622f61%3A0x91c5f879df0a26f4!2sDepartment%20of%20Education%20-%20NCR%20Regional%20Office!5e0!3m2!1sen!2sph!4v1664782091443!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
 
             </div>
           </div>
