@@ -220,34 +220,36 @@
                       <label for="Subject" class="form-label fw-bold">Subject <span class="text-danger">*</span></label>
                       <input type="text" class="form-control subject" id="Subject" required>
                     </div>
-                    <label for="" class="form-label fw-bold">Type Of Concern (Please Choose One)</label>
+                    <!-- <label for="" class="form-label fw-bold">Type Of Concern (Please Choose One)</label>
                     <div class="mb-2 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Query</label>
-                    </div>
-                    <div class="mb-2 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                      <label class="form-check-label" for="exampleCheck2">Complaint / Feedback</label>
+
+                      <label class="form-check-label" for="query">
+                        <input type="checkbox" class="form-check-input" name="cb" value="Query" id="query">Query
+                      </label>
                     </div>
                     <div class="mb-2 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck3">
-                      <label class="form-check-label" for="exampleCheck3">Suggestion</label>
+                      <label class="form-check-label" for="feedback">
+                        <input type="checkbox" class="form-check-input" name="cb" value="Complaint / Feedback" id="feedback">Complaint / Feedback
+                      </label>
                     </div>
                     <div class="mb-2 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck4">
-                      <label class="form-check-label" for="exampleCheck4">Request</label>
+                      <label class="form-check-label" for="Suggestion">
+                        <input type="checkbox" class="form-check-input" name="cb" value="Suggestion" id="Suggestion">Suggestion
+                      </label>
                     </div>
                     <div class="mb-2 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck5">
-                      <label class="form-check-label" for="exampleCheck5">Other Concern</label>
+                      <label class="form-check-label" for="Request">
+                        <input type="checkbox" class="form-check-input" name="cb" value="Request" id="Request">Request
+                      </label>
                     </div>
-                    <div class="mb-3">
-                      <label for="Concern" class="form-label fw-bold">Other Concern</label>
-                      <input type="text" class="form-control" id="Concern">
-                    </div>
+                    <div class="mb-2 form-check">
+                      <label class="form-check-label" for="Concern">
+                        <input type="checkbox" class="form-check-input" name="cb" value="Concern" id="Concern">Concern
+                      </label>
+                    </div> -->
                     <label for="" class="form-label fw-bold">Message <span class="text-danger">*</span></label>
                     <div class="form-floating mb-3">
-                      <textarea class="form-control" placeholder="" id="floatingTextarea2" style="height: 100px" required></textarea>
+                      <textarea class="form-control" placeholder="" id="floatingTextarea2" style="height: 200px" required></textarea>
                       <!-- <label for="floatingTextarea2">Comments</label> -->
                     </div>
     
@@ -383,6 +385,7 @@
         </div>
       </div>
     </div>
+
     <script>
       var config = {
       apiKey: "AIzaSyAsc9VH1T4NCmdoE6YoV4ES5nQlvdiLXOI",
@@ -400,11 +403,34 @@
 
     db.settings({ timestampsInSnapshots: true });
 
+    const qadform = document.querySelector('.qadform')
+    qadform.addEventListener('submit', (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      const name = qadform['Name'].value
+      const email = qadform['Email'].value
+      const subj = qadform['Subject'].value
+      const concern = qadform['Concern'].value
+      const textarea = qadform['floatingTextarea2'].value
 
-    // const choices_span = document.querySelector('choices_span')
+      let checkboxes = document.querySelectorAll('input[name="cb"]:checked')
+      let values = []
+      checkboxes.forEach((i) => {
+        values.push(i.value)
+      })
+      const result = values.join(",")
+      console.log(result)
+      var link = "mailto:qad-i.ncr@deped.gov.ph"
+             + `?cc=${email}`
+             + "&subject=" + encodeURIComponent(`${subj}`)
+             + "&body=" + encodeURIComponent(`${ textarea}`)
+    ;
+    
+    window.location.href = link;
+    })
 
 </script>
-<script src="./js/qadiChatbot.js"></script>
+<!-- <script src="./js/qadiChatbot.js"></script> -->
 <script type="text/javascript" id="gwt-pst">
   (function(d, eId) {
     var js, gjs = d.getElementById(eId);
@@ -416,6 +442,8 @@
   var gwtpstReady = function(){
     var firstPst = new gwtpstTime('pst-time');
   }
+
+
   </script>
 <!-- <script src="./fb.js"></script> -->
 <!-- <script src="./auth.js"></script> -->

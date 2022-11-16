@@ -31,6 +31,8 @@ formSubmit.addEventListener('submit', (e) => {
 
 
 
+
+
 const snippet = document.querySelector('.snippet');
 const bot_message = document.querySelectorAll('.bot_message')
 const runQadBot = () => {
