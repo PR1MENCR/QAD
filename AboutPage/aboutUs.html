@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QAD</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- <link rel="stylesheet" href="./css/about.css"> -->
+    <!-- <link rel="stylesheet" href="./bootstrap.css"> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.cdnfonts.com/css/old-english-five" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+
+    
+     <!-- firebase -->
+     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+ 
+     <style>
+       .main .ncr{
+           text-align: justify;
+       }
+     </style>
+</head>
+<body >
+  <!-- banner -->
+  <div id="particles-js">
+    <div id="landing" class="container-fluid ">
+      <div class="px-4 px-md-3 px-lg-5" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%;">
+        <div class="mobile_column d-flex align-items-center">
+          <img class="me-md-3 me-lg-4" id="qad_logo" src="../img/QAD Logo FINAL.png" alt="">
+          <div class="brand">
+            <div class="top_brand d-flex flex-column">
+              <h3 class="text-light pb-2">Quality Assurance Division</h3>
+            </div>
+            <span class="my_guhit"></span>
+            <span class="brand_span mb-4">DEPARTMENT OF EDUCATION - NATIONAL CAPITAL REGION</span>
+
+          </div>
+          <div class="date large-3 columns">
+            <div id="text-1" class="ear-content widget anchor widget_text">	
+                  <div class="textwidget">
+                    <div id="pst-container">
+                      <div>Philippine Standard Time:</div><div id="pst-time"></div>
+                  </div>
+                </div>
+              </div>						
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="main">
+     
+      <nav class="mynav navbar navbar-expand-xl navbar-light px-4 px-md-4 px-lg-5 py-3">
+        <div class="nav_bar_nav">
+          <div class="nav2 ">
+            <div class="mybutton">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          
+            </div>
+        
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <div class="time">
+                <!-- <p>time</p> -->
+              </div>
+              <ul class="navbar-nav text-white w-100"> 
+                <li class="nav-item me-0 mt-3 mt-lg-0 mb-2 mb-lg-0 me-lg-2 me-lg-3">
+                  <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
+                  <a class="nav-link P-0" data-bs-toggle="collapse" data-bs-target="#About" href="" id="navbarDarkDropdownMenuLink"aria-describedby="false">
+                    About
+                  </a>
+                  <div class="collapse" id="About" style="transition: 0.3s ease;">
+                    <ul class="p-0" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li class="list_blue"><a class="dropdown-item dropdown-item-dark" href="./aboutRegion.html">About the Region</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../aboutUs.html">About Us</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="../about.html">Programs and Projects</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="../about.html">Transparency</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="../about.html">Data Privacy Notice</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item dropdown me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
+                  <a class="nav-link P-0" data-bs-toggle="collapse" data-bs-target="#pRiMe" href="" id="navbarDarkDropdownMenuLink"aria-describedby="false">
+                    pRiMe Services
+                  </a>
+                  <div class="collapse" id="pRiMe" style="transition: 0.3s ease;">
+                    <ul class="p-0" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">New Government Permit Application</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="../services.html">Renewal of Government Permit Application</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="../services.html">Government Recognition Application</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="../services.html">Tuition and Other Fees Increase Application</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="../services.html">Request for Temporary and Permanent Closure</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="../services.html">Request for Certifications</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="../services.html">Request for Special Order</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item dropdown me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
+                  <a class="nav-link P-0" data-bs-toggle="collapse" data-bs-target="#Issuances" href="" id="navbarDarkDropdownMenuLink"aria-describedby="false">
+                    Issuances
+                  </a>
+                  <div class="collapse" id="Issuances" style="transition: 0.3s ease;">
+                    <ul class="p-0" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li class="myli">
+                        <a class="dropdown-item national" data-bs-toggle="collapse" data-bs-target="#dropdown_child">
+                          National &raquo;
+                        </a>
+                        <div class="collapse" id="dropdown_child" style="transition: 0.3s ease;">
+                          
+                          <ul id="dropdown_spes" class=" dropdown-submenu ">
+                            <li>
+                                <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../issuancesPage/depedOrders.html">DepEd Orders related to QAD</a></li>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="../issuancesPage/depedMemoranda.html">DepEd Memoranda related to QAD</a>
+                            </li>
+                          </ul>
+                        </div>
+                    
+                      </li>
+                      <!-- <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./issuances.html">National</a></li> -->
+                      <li class="list_blue"><a class="dropdown-item" href="../issuancesPage/regional.html">Regional</a></li>
+                    </ul>
+                  </div>
+                </li>
+          
+                <li class="nav-item dropdown me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
+                  <a class="nav-link P-0" data-bs-toggle="collapse" data-bs-target="#Resources" href="" id="navbarDarkDropdownMenuLink"aria-describedby="false">
+                    Resources
+                  </a>
+                  <div class="collapse" id="Resources" style="transition: 0.3s ease;">
+                    <ul class="p-0" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../resources.html">DepEd TV</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="../resources.html">Facts and Figures</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="../resources.html">Downloadable Files and Forms</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item dropdown me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
+                  <a class="nav-link P-0" data-bs-toggle="collapse" data-bs-target="#qadi" href="" id="navbarDarkDropdownMenuLink"aria-describedby="false">
+                    The QAD-i
+                  </a>
+                  <div class="collapse" id="qadi" style="transition: 0.3s ease;">
+                    <ul class="p-0" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../theQADi.html">Feedback</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLScn8NxMYLJI4O1imG_-cMhwNSf0I6pUtT7iXegLxjH5t573gg/formrestricted" target="_blank">i-Share Participation Tool</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSdRgF48suae9-I9Ih81Pa6XA8YyY91EBu_Z0rbPuDVTLTmpSQ/viewform?fbclid=IwAR2Bwnj7jVwbGsrzEzZOnZEDJgtqy4Fp-11zjOufTMipiNNOV3FNwWPX_t0">Client Satisfaction Survey</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="../theQADi.html">Regional Directory</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="../theQADi.html">Division Directory</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item  me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
+                  <a class="nav-link active" aria-current="page" href="../faqs.html">How To</a>
+                </li>
+        
+                <!-- <div class="accounts d-flex flex-end">
+                  <li class="logged-in-admin nav-item me-0 mb-3 mb-lg-0 me-md-3 mx-lg-2 me-lg-3">
+                    <a class="nav-link active" aria-current="page" href="./admin/admin_dashboard.html">Dashboard</a>
+                  </li>
+                  <li class="logged-in-admin nav-item me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
+                    <a class="nav-link active" aria-current="page" href="./admin/admin_Accounts.html">Accounts</a>
+                  </li>
+                  <span></span>
+                  <li class="nav-item logged-out px-0">
+                    <a class="nav-link modal-trigger" data-toggle="modal" data-target="#loginmodal" href="#" >Login</a>
+                  </li>
+                  <div class="dropdown logged-in">
+                    <button class="account btn text-dark dropdown-toggle d-flex justify-content-center align-items-center " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="background: #FAD02C;">
+
+                    </button>
+           
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">My Account</a></li>
+                      <li id="logout"><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                  </div>
+                </div> -->
+                <!-- <li id="account" class="nav-item logged-in px-0">
+                  <a class="nav-link modal-trigger" data-toggle="displayAccount" data-target="displayAccount" href="#" style="display:none;">Account</a>
+                </li> -->
+                <!-- <li class="nav-item logged-in px-0">
+                  <a class="nav-link modal-trigger" data-toggle="modal" data-target="#loginmodal" href="#">Logout</a>
+                </li> -->
+              </ul>
+            </div>
+
+    
+          </div>
+          <li class="nav-item search">
+            <input class="px-1" type="text" placeholder="Search">
+           </li>
+        </div>
+      
+    </nav>
+    <div class="site-map d-flex px-4 my-3">
+      <p class="p-0">YOU ARE HERE. ABOUT US</p>
+    </div>
+    <div class="container px-4 mb-4">
+        <h3>The Quality Assurance Division</h3>
+        <p>The Quality Assurance Division (QAD) of the DepEd National Capital Region is a Regulatory unit of the Department of Education.  The main task is to promote and protect accountability and transparency in the Region by ensuring compliance with standards in the performance of roles and functions towards achieving outputs and results by assessing, assuring quality, and monitoring and evaluating performance to obtain accurate, timely, and relevant information that serves as the basis for decision-making and continuous improvement in the delivery of Basic Education services for both public and private Basic Educational institutions in the Region.</p>
+    </div>
+    <div class="container px-4 mb-4">
+        <h5 class="font-weight-bold">Statement of Purpose</h5>
+        <p>The Quality Assurance Division (QAD) provide the RO and SDOs with a guide in decision-making and policy directions compliant with standards of quality basic education by promoting accountability and transparency towards continuous improvement</p>
+    </div>
+    <div class="container px-4 table-responsive">
+        <table class="table table-bordered">
+            <thead style="background: rgb(226, 226, 226);">
+              <tr>
+                <th scope="col" class="col-md-6 text-center">Outcomes</th>
+                <th scope="col" class="col-md-6 text-center">Outcomes Indicators</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                    <ul>
+                        <li>
+                            RO and SDOs’ standards, guidelines, systems and processes are well defined and relevant to the context of the region.
+                        </li>
+                        <li>
+                            RO top management based their decisions and actions on accurate, timely, validated and relevant information
+                        </li>
+                        <li>
+                            All schools are operating in compliance with the policies, guidelines, and standards set by DepEd.
+                        </li>
+                    </ul>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+              </tr>
+            </tbody>
+          </table>
+        
+    </div>
+    <div class="container px-4">
+
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead style="background: rgb(226, 226, 226);">
+            <tr>
+              <th scope="col" class="text-center">Key Result Areas</th>
+              <th scope="col" class="text-center">Objectives</th>
+              <th scope="col" class="text-center">Key Performance Indicators</th>
+              <th scope="col" class="text-center">Outputs</th>
+              <th scope="col" class="text-center">Outputs Indicators</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td style="border-bottom: 0 !important;">
+                    Quality Assurance Framework, Policies, Systems and Processes
+                </td>
+                <td rowspan="5">
+                    To institutionalize a regional Quality Assurance – Monitoring and Evaluation (QA-M&E) To institutionalize a regional Quality Assurance – Monitoring and Evaluation (QA-M&E) and Assessment Frameworks, policies, systems, and processes based on national standards and guidelines
+                </td>
+                <td>
+                    Presence of QA Framework, M&E Framework and Assessment Framework 
+                </td>
+                <td>
+                    Functional/ Operational QA-M&E and Assessment Framework 
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                  <td>
+                </td>
+                <td>
+                  Number of systems established
+                </td>
+                <td>
+                  Established Systems
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                  <td>
+                </td>
+                <td>
+                  Clear and well-defined core-process flow of services rendered
+                </td>
+                <td rowspan="3">
+                  Contextualized policies, standards and guidelines for QA of core processes
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+              <td>
+            </td>
+            <td>
+              Number of recommendations to policy formulation and development of regional policy guidelines
+            </td>
+            <td>
+            </td>
+        </tr>
+            <tr>
+              <td>
+            </td>
+            <td>
+              Presence of regional policies, standards and guidelines for quality assurance of core processes
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+              <td>
+            </td>
+            <td rowspan="3">
+              To ensure that systems and processes are utilized and services are effective and efficient in the delivery of quality basic education
+            </td>
+            <td rowspan="2">
+              School Performance indicators:
+              <ul>
+                <li>Cohort-Survival rate</li>
+                <li>Drop-out Rate</li>
+                <li>Achievement rate (National Achievement Test [NAT])</li>
+                <li>Enrolment rate</li>
+                <li>Completion rate</li>
+              </ul>
+            </td>
+            <td>Improved Access to quality basic education</td>
+            <td></td>
+       </tr>
+       <tr>
+            <td>
+          </td>
+          <td>
+            Improved achievement level of learners
+          </td>
+          <td></td>
+       </tr>
+       <tr>
+            <td>
+          </td>
+          <td>
+            Presence and functionality of tracking system on learners’ outcomes
+          </td>
+          <td>Improved tracking system of learners’ outcomes</td>
+          <td></td>
+        </tr>
+       <tr>
+            <td>
+          </td>
+          <td rowspan="2">
+            To raise the performance rating of RO and SDO personnel
+          </td>
+          <td>Increased level of performance of RO, SDOs and school personnel</td>
+          <td>Improved business processes</td>
+          <td></td>
+      </tr>
+       <tr>
+            <td>
+          </td>
+          <td>Regional Monitoring, Evaluation and Assessment (RMEA) facilitates improved performance of Results-based Performance Management System (RPMS), Organization Performance and Commitment Review Form (OPCRF), Individual Performance and Commitment Review Form (IPCRF)</td>
+          <td>Improved level of performance</td>
+          <td></td>
+      </tr>
+      <tr>
+        <td>
+      </td>
+        <td rowspan="3">
+          To ensure the proper implementation of P/P/As for continuous improvement and sustainability.
+      </td>
+      <td rowspan="3">P/P/As are implemented with relevance, timeliness and compliant to standards</td>
+      <td>Improved utilization of resources (time, effort, money)</td>
+      <td></td>
+  </tr>
+      <tr>
+        <td>
+      </td>
+      <td>Increased awareness and participation rate among implementers and stakeholders</td>
+      <td></td>
+  </tr>
+      <tr>
+        <td>
+      </td>
+      <td>Increased level of performance</td>
+      <td></td>
+     </tr>
+      <tr>
+          <td rowspan="2">Assessment, Monitoring and Evaluation</td>
+          <td >To implement quarterly review (MEA) on the performance of RO/SDO for policy actions and adjustments</td>
+          <td>Number of quarterly MEA implemented</td>
+          <td rowspan="2">Quarterly report
+
+            Policy Recommendations
+            
+            Activity Completion 
+            </td>
+          <td></td>
+      </tr>
+      <tr>
+        <td >To ensure that the RO and SDOs strategic directions, plan adjustments, and policies are anchored on the results of MEA To evaluate region’s effectiveness through midterm review against targets and KPIs and as basis for TA</td>
+        <td>Number of QAME conducted
+        </td>
+        <td></td>
+    </tr>
+      <tr>
+        <td></td>
+        <td>To enable RO Units to use QAME results in determining employees’ Learning and development needs</td>
+        <td rowspan="2">Number of consolidated quarterly performance reports provided to FTAD for analysis as basis for TA by RFTAT</td>
+        <td>Consolidated Quarterly Performance Report</td>
+        <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>To help ensure that learners’ performance increases through implementation of relevant programs, activities and projects </td>
+      <td>Budget Accountability Report (BAR) 1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="2">Regulatory and Developmental Services to Schools</td>
+      <td>To lead in conducting proper assessment of public and private schools by counter checking SDO’s documentation of the schools’ compliance to requirements and standards of quality basic education, in order to provide sound basis for recommending to the RD the accreditation, establishment and/or recognition of the schools</td>
+      <td rowspan="2">100 % of application received are processed, (validated, recommended for issuance of permit to operate, government recognition, accreditation) within agreed timeframe.</td>
+      <td rowspan="2">List of public and private schools validated and recommended for issuance of permit to operate, government recognition, accreditation</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>To recommend to the RD the establishment, separation, recognition, closure and accreditation of the public and private schools based on assessment of their compliance to requirements and standards of quality basic education</td>
+
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td rowspan="2">To present to the regional management committee an annual report on performance of private schools in the region in compliance to quality education standards to arrive at recommendations on further improving the quality of education in the region</td>
+      <td>One annual report on performance of private schools presented to the regional management committee</td>
+      <td rowspan="2">Annual Report</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Accuracy and completeness of reports</td>
+      <td></td>
+    </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead style="background: rgb(226, 226, 226);">
+            <tr>
+              <th scope="col" class="text-center">JD Number</th>
+              <th scope="col" class="text-center">Position</th>
+              <th scope="col" class="text-center">Job Summary</th>
+              <th scope="col" class="text-center">Key Result Area</th>
+              <th scope="col" class="text-center">Reports to</th>
+              <th scope="col" class="text-center">Position Supervised</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>Chief Education Supervisor</td>
+              <td>To facilitate, coordinate, and provide technical inputs in the crafting of the region’s policies and strategic directions towards ensuring quality, accountability, and transparency in all aspects of educational management and operations, by setting up, making operational, and sustaining a Quality Management System (QMS) in the Regional Office and in all school divisions
+
+                To lead and manage the work of the QAD teams that will facilitate setting up quality assurance systems and standards and monitoring and evaluating performance of the regional office and that of the school divisions.
+                </td>
+              <td>
+                <ul>
+                  <li>Quality Assurance Framework, Policies, Systems and Processes</li>
+                  <li>Assessment, Monitoring and Evaluation</li>
+                  <li>Regulatory and Developmental Services to Schools</li>
+                </ul>
+              </td>
+              <td>Regional Director, DepEd NCR and Officer-In-Charge, Office of the Undersecretary Human Resource and Organizational Development</td>
+              <td>Education Program Supervisors
+                Administrative Assistant II
+                Administrative Aide VI
+                Administrative Aide IV
+                </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Education Program Supervisor</td>
+              <td>To provide technical support in the implementation of the strategic and operation plans of the region towards ensuring quality, accountability and transparency by developing the components and mechanisms of the QAD systems to suit local situation, conducting monitoring and evaluation and reporting progress and results of plans and programs against the educational goals and performance targets of the regional office and schools divisions.
+                <p class="py-2">
+                  To provide technical assistance to functional divisions/units of the Region and those of the Schools Divisions for quality assuring their processes and outputs towards continuous improvement.
+                </p>
+                  </td>
+              <td></td>
+      
+              <td>Chief Education Supervisor</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Administrative Assistant II</td>
+              <td>To assist the Chief and Supervisors and provide administrative support in the effectiveness and efficient operation of the Quality Assurance Division.</td>
+              <td></td>
+              <td>Chief Education Supervisor</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Administrative Aide VI</td>
+              <td>To assist the Chief Education Supervisor and provide administrative support in the effective and efficient operation of the Quality Assurance Division.</td>
+              <td></td>
+              <td>Chief Education Supervisor</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Administrative Aide IV</td>
+              <td>To provide administrative tasks in a variety of functions to a department head, team, or another group in an organization. Receives and logs incoming communications, delivers documents/communications to different division offices, assists in the management of files, printing and updating databases.</td>
+              <td></td>
+              <td>Chief Education Supervisor</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+         
+    </div>
+  
+         <!-- footer -->
+         <div class="footer_start container-fluid">
+          <div class="container py-5 text-center">
+           
+
+            <div class="wrapper">
+              <p class="m-0">How are we doing? Help us to improve our services. Your feedback matters to us.</p>
+              <a class="m-0" href="https://docs.google.com/forms/d/e/1FAIpQLSdRgF48suae9-I9Ih81Pa6XA8YyY91EBu_Z0rbPuDVTLTmpSQ/viewform?fbclid=IwAR2Bwnj7jVwbGsrzEzZOnZEDJgtqy4Fp-11zjOufTMipiNNOV3FNwWPX_t0">take our Client Satisfaction Survey</a>
+            </div>
+            <div class="wrappere">
+              <p class="m-0">Thank you for browsing the QAD-i. You are visitor no.:</p>
+              <div id="sfc76wnfcs8c8czec2ppm8hleml1h8637zn"></div>
+              <script type="text/javascript" src="https://counter9.stat.ovh/private/counter.js?c=76wnfcs8c8czec2ppm8hleml1h8637zn&down=async" async></script>
+              <noscript><a href="https://www.freecounterstat.com" title="free hit counter"><img src="https://counter9.stat.ovh/private/freecounterstat.php?c=76wnfcs8c8czec2ppm8hleml1h8637zn" border="0" title="free hit counter" alt="free hit counter"></a></noscript>   
+            </div>
+            <div class="wrapper">
+              <p class="m-0">What do you think of our website? We want to hear from you.</p>
+              <a class="m-0" href="https://docs.google.com/forms/d/e/1FAIpQLScn8NxMYLJI4O1imG_-cMhwNSf0I6pUtT7iXegLxjH5t573gg/viewform">i-Share Participation Tool</a>
+            </div>
+            <a class="contact_us_footer" href="./theQADi.html">Contact us here</a>
+          </div>
+
+        </div>
+        <!-- footer -->
+         <div id="footer" class="container-fluid mt-0 py-4 px-2 px-lg-5">
+          
+          <div class="footer_content">
+            <div class="seal">
+              <img class="govphseal" src="../img/govph seal.png" alt="">
+            </div>
+            <div class="footer_details">
+              <div class="rep">
+                <p>REPUBLIC OF THE PHILIPPINES</p>
+                <span>All content is in the public domain unless otherwise stated.</span>
+              </div>
+              <div class="about">
+                <p>ABOUT GOVPH</p>
+                <span>Learn more about the Philippine government, its structure, how government works and the people behind it.</span>
+                <div class="gov_footer mt-3 d-flex flex-column">
+                  <a href="https://www.gov.ph/">GOV.PH</a>
+                  <a href="https://www.officialgazette.gov.ph/">Official Gazette</a>
+                  <a href="https://data.gov.ph/index/home">Open Data Portal</a>
+                </div>
+              </div>
+              <div class="gov_link">
+                <div class="links">
+                  <p>GOVERNMENT LINKS</p>
+                  <a href="https://op-proper.gov.ph/">Office of the President</a>
+                  <a href="https://ovp.gov.ph/">Office of the Vice President</a>
+                  <a href="https://legacy.senate.gov.ph/">Senate of the Philippines</a>
+                  <a href="https://sc.judiciary.gov.ph/">Supreme Court</a>
+                  <a href="http://ca.judiciary.gov.ph/">Court of Appeals</a>
+                  <a href="https://sb.judiciary.gov.ph/">Sandiganbayan</a>
+                </div>
+              </div>
+              <div class="logos">
+                <div class=""><a target="_blank" href="https://www.foi.gov.ph/"><img class="small_logo" src="../img/freedom of information.png" alt=""></a></div>
+                <div class=""><a target="_blank" href="../transparency.html"><img src="../img/transparency-seal-160x160.png" alt=""></a></div>
+                <div class=""><a target="_blank" href="https://pqf.gov.ph/Home/Details/11"><img src="../img/pqf logo.png" alt=""></a></div>
+                <div class=""><a target="_blank" href="https://depedictncr.wordpress.com/?fbclid=IwAR2hHeCHUKXy9ncAhUvebz817Sl58DZcxvkuF3_1oFLk6_6O6Rw3GFjyIlE"><img src="../img/DepEd NCR logo.png" alt=""></a></div>
+              </div>
+            </div>
+              <span class="last">
+                <p>
+                  Managed by DepEd NCR Quality Assurance Division (QAD)
+                </p>
+              </span>
+          </div>
+    </div>
+      
+    </div>
+ 
+    </div>
+    <div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div id="loginform" class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="login-form">
+              <div class="form-group">
+                <label for="login-email">Email address</label>
+                <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp" placeholder="Email Address" required>
+              </div>
+              <div class="form-group">
+                <label for="login-password">Password</label> 
+                <input type="password" class="form-control" id="login-password" placeholder="Choose Password" required>
+                <p class="error text-danger"></p>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn text-white" style="background: #0F3460;">Log In</button>
+                
+              </div>
+            </form>
+          </div>
+      
+        </div>
+        <div id="success" class="modal-content">
+          <div class="p-2 px-3 d-flex justify-content-between align-items-center">
+            <h3 class="m-0">Success 
+            </h3>
+            <i class="fa fa-check-square text-success" style="font-size:48px;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+      var config = {
+      apiKey: "AIzaSyAsc9VH1T4NCmdoE6YoV4ES5nQlvdiLXOI",
+      authDomain: "qad-33bed.firebaseapp.com",
+      projectId: "qad-33bed",
+      storageBucket: "qad-33bed.appspot.com",
+      messagingSenderId: "781570120119",
+      appId: "1:781570120119:web:d67f78d8ea79347954f032",
+      measurementId: "G-KK2WSW2HSF"
+    };
+
+    firebase.initializeApp(config);
+    const db = firebase.firestore();
+    const auth = firebase.auth();
+
+    db.settings({ timestampsInSnapshots: true });
+
+</script>
+<script type="text/javascript" id="gwt-pst">
+  (function(d, eId) {
+    var js, gjs = d.getElementById(eId);
+    js = d.createElement('script'); js.id = 'gwt-pst-jsdk';
+    js.src = "//gwhs.i.gov.ph/pst/gwtpst.js?"+new Date().getTime();
+    gjs.parentNode.insertBefore(js, gjs);
+  }(document, 'gwt-pst'));
+  
+  var gwtpstReady = function(){
+    var firstPst = new gwtpstTime('pst-time');
+  }
+  </script>
+<!-- <script src="./fb.js"></script> -->
+<!-- <script src="./auth.js"></script> -->
+
+  <script src="../particles.js"></script>
+  <script src="../app.js"></script>
+  
+	<script src="../js/jquery.min.js"></script> 
+   <!-- <script src="./js/popper.js"></script>
+  <script src="./js/bootstrap.min.js"></script> -->
+   <script src="../js/main.js"></script> 
+  <!-- firebase -->
+
+</body>
+</html>
