@@ -410,23 +410,24 @@
       const name = qadform['Name'].value
       const email = qadform['Email'].value
       const subj = qadform['Subject'].value
-      const concern = qadform['Concern'].value
+      // const concern = qadform['Concern'].value
       const textarea = qadform['floatingTextarea2'].value
 
-      let checkboxes = document.querySelectorAll('input[name="cb"]:checked')
-      let values = []
-      checkboxes.forEach((i) => {
-        values.push(i.value)
-      })
-      const result = values.join(",")
-      console.log(result)
+      // let checkboxes = document.querySelectorAll('input[name="cb"]:checked')
+      // let values = []
+      // checkboxes.forEach((i) => {
+      //   values.push(i.value)
+      // })
+      // const result = values.join(",")
       var link = "mailto:qad-i.ncr@deped.gov.ph"
              + `?cc=${email}`
              + "&subject=" + encodeURIComponent(`${subj}`)
              + "&body=" + encodeURIComponent(`${ textarea}`)
     ;
     
-    window.location.href = link;
+      window.location.href = link;
+
+       qadform.reset();  
     })
 
 </script>
