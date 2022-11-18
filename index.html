@@ -33,6 +33,70 @@
      <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
 </head>
 <body >
+
+  <div class="accessibility_tools">
+    <div class="img_button">
+      <img src="./img/download (1).png" alt="">
+    </div>
+    <div class="a_wrapper">
+      <h4>Accessibility tools</h4>
+      <ul>
+        <li>Increase Text</li>
+        <li>Dicrease Text</li>
+        <li>Grayscale</li>
+        <li>High Contrast</li>
+        <li>Negative Contrast</li>
+        <li>Light Background</li>
+        <li>Links Underline</li>
+        <li>Underline Font</li>
+        <li>Readable Font</li>
+        <li>Reset</li>
+      </ul>
+    </div>
+  </div>
+
+  <style>
+    .accessibility_tools{
+      z-index: 99;
+      position: fixed;
+      right: -250px;
+      top:40%;
+      background: #fff;
+      border: 1px solid rgb(255, 81, 81);
+      width: 250px;
+      padding: 15px;
+      transition: 0.3s;
+    }
+    .accessibility_tools.active{
+      right: 0;
+    }
+    .accessibility_tools .img_button{
+      position: absolute;
+      padding: 5px;
+      background: #fff;
+      top: -1px;
+      left: -62px;
+      border: 1px solid rgb(255, 81, 81);
+      border-right: 1px solid #fff;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+    .accessibility_tools .img_button img{
+      height: 50px;
+      width: auto;
+    }
+    .accessibility_tools ul{
+      padding-top: 10px;
+      padding-left: 0;
+      margin: 0;
+    }
+    .accessibility_tools li{
+      list-style: none;
+      padding: 6px;
+      cursor: pointer;
+    }
+
+  </style>
   <!-- banner -->
   <div id="particles-js">
     <div id="landing" class="container-fluid ">
@@ -403,10 +467,17 @@
         if(i.classList.contains('show')){
           i.classList.remove('show')
         }
-    }
-})
+      }
+    })
   })
 
+
+  // accessibility tools
+  const img_accessibiility = document.querySelector('.img_button')
+  const accessibility_tools = document.querySelector('.accessibility_tools')
+  img_accessibiility.addEventListener('click', () => {
+    accessibility_tools.classList.toggle('active')
+  })
 
   
   </script>
