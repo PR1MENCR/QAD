@@ -36,7 +36,7 @@
 
   <div class="accessibility_tools">
     <div class="img_button">
-      <img src="./img/download (1).png" alt="">
+      <i class="fa fa-universal-access" aria-hidden="true"></i>
     </div>
     <div class="a_wrapper">
       <h4>Accessibility tools</h4>
@@ -60,14 +60,14 @@
       z-index: 99;
       position: fixed;
       right: -200px;
-      top:40%;
+      top:33%;
       background: #fff;
       border: 1px solid rgb(18, 14, 255);
       width: 200px;
       transition: 0.3s;
     }
     .accessibility_tools .a_wrapper h4{
-      padding: 18px;
+      padding: 14px;
       font-size: 20px;
       margin: 0;
     }
@@ -79,15 +79,21 @@
       padding: 5px;
       background: #fff;
       top: -1px;
-      left: -62px;
+      left: -54px;
       border: 1px solid rgb(18, 14, 255);
       border-right: 1px solid #fff;
       box-sizing: border-box;
+      background: rgb(14, 58, 255);
+      height: 55px;
+      width: 55px;
       cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .accessibility_tools .img_button img{
-      height: 50px;
-      width: auto;
+    .accessibility_tools .img_button i{
+      font-size: 40px;
+      color: #fff;
     }
     .accessibility_tools ul{
   
@@ -101,7 +107,8 @@
       transition: 0.3s;
     }
     .accessibility_tools li:hover{
-      background: rgb(255, 253, 148);
+      background: rgb(53, 39, 240);
+      color: #fff;
     }
   </style>
   <!-- banner -->
@@ -496,7 +503,7 @@
       console.log(e.target)
       font_size.forEach(size => {
         clicks += 10;
-          size.style.fontSize = `${clicks}px important`
+          size.style.fontSize = `${clicks}px`
       })
     })
   })
