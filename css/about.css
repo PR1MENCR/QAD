@@ -3,3 +3,8 @@
     font-weight: bold;
 }
 
+
+.main .ncr .primeimage img{
+    height: auto;
+    width: 120px;
+}
