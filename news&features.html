@@ -33,84 +33,18 @@
      <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
 </head>
 <body >
-
-  <!-- <div class="accessibility_tools">
-    <div class="img_button">
-      <i class="fa fa-universal-access" aria-hidden="true"></i>
-    </div>
-    <div class="a_wrapper">
-      <h4>Accessibility Tools</h4>
-      <ul class="a_btn">
-        <li>Increase Text</li>
-        <li>Decrease Text</li>
-        <li>Grayscale</li>
-        <li>High Contrast</li>
-        <li>Negative Contrast</li>
-        <li>Light Background</li>
-        <li>Links Underline</li>
-        <li>Underline Font</li>
-        <li>Readable Font</li>
-        <li>Reset</li>
-      </ul>
-    </div>
-  </div> -->
-
-  <style>
-    .accessibility_tools{
-      z-index: 99;
-      position: fixed;
-      right: -200px;
-      top:33%;
-      background: #fff;
-      border: 1px solid #666666;
-      width: 200px;
-      transition: 0.3s;
-    }
-    .accessibility_tools .a_wrapper h4{
-      padding: 14px;
-      font-size: 20px;
-      margin: 0;
-    }
-    .accessibility_tools.active{
-      right: 0;
-    }
-    .accessibility_tools .img_button{
-      position: absolute;
-      padding: 5px;
-      background: #fff;
-      top: -1px;
-      left: -54px;
-      border: 1px solid #666666;
-      border-right: 1px solid #fff;
-      box-sizing: border-box;
-      background: #666666;
-      height: 55px;
-      width: 55px;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .accessibility_tools .img_button i{
-      font-size: 40px;
-      color: #fff;
-    }
-    .accessibility_tools ul{
-  
-      padding-left: 0;
-      margin: 0;
-    }
-    .accessibility_tools li{
-      list-style: none;
-      padding: 6px 15px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .accessibility_tools li:hover{
-      background: #e9ecef;
-      /* color: #fff; */
-    }
-  </style>
+    <style>
+        .event-img{
+            height: 400px;
+            /* width: ; */
+        }
+        @media screen and (max-width: 576px) {
+            .event-img{
+            height:auto;
+            /* width: ; */
+            }   
+        }
+    </style>
   <!-- banner -->
   <div id="particles-js">
     <div id="landing" class="container-fluid ">
@@ -139,7 +73,6 @@
     </div>
   </div>
     <div class="main">
-      
      <!-- navigation -->
         <nav class="mynav navbar navbar-expand-xl navbar-light p-0 px-4 px-md-4 px-lg-5 py-1 py-lg-0">
               <div class="nav_bar_nav">
@@ -201,7 +134,7 @@
                           <ul class="p-0" aria-labelledby="navbarDarkDropdownMenuLink">
                             <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="https://www.youtube.com/c/DepEdTV">DepEd TV</a></li>
                             <li class="list_blue"><a class="dropdown-item" href="./resources.html">Facts and Figures</a></li>
-                            <li class="list_blue"><a class="dropdown-item" href="./news&features.html">News and Features</a></li>
+                            <li class="list_blue"><a class="dropdown-item" href="./resources.html">News</a></li>
                             <!-- <li class="list_blue"><a class="dropdown-item" href="./resources.html">Downloadable Files and Forms</a></li> -->
                           </ul>
                         </div>
@@ -264,66 +197,70 @@
             
           </nav>
           <div class="site-map d-flex px-4 my-3">
-            <p class="p-0">YOU ARE HERE. HOME</p>
+            <p class="p-0">YOU ARE HERE. NEWS AND FEATURES</p>
           </div>
-          <div id="slider" class="container-fluid my-3 my-md-0 mb-5 ">
-            <div class="container" >
-              <div class="row">
-                <div class="mb-5 mb-lg-0">
-                  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators" style="position: absolute; bottom:-45px; ">
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active" style="transition: 0.3s ease;">
-                        <img  src="./img/Sliderlanding.png" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item" style="transition: 0.3s ease;">
-                        <img  src="./img/web banner 1.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item" style="transition: 0.3s ease;">
-                        <img src="./img/web banner 2.png" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item" style="transition: 0.3s ease;">
-                        <img src="./img/web banner 3.png" class="d-block w-100" alt="...">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-
-
-                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-
-
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="system container-fluid mt-5">
+          <div class="container-fluid">
             <div class="container">
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="mb-1 pb-2"><a href="https://drive.google.com/file/d/1Qu91tUt4aQGjBNeXmO-oiPJEaTpGK8O8/view?fbclid=IwAR1HHazF1A2zCsgiRoJHyvKzefVB2TUWQFNU7fBYDTKNOrzBl4EuQsxH72M"><img src="./img/SFAST.png" alt=""></a></div>
+                <div class="row py-3">
+                    <div class=" col-sm-6 col-md-4 p-md-2 my-3">
+                        <div class="d-flex flex-column rounded">
+                            <img class="event-img rounded mb-2" src="./img/1 QAD Magazine January 2022.png" alt="">
+                            <div>January 2022 Issue <a href="https://drive.google.com/drive/folders/1pjT0fuBMC5rkkmyGfGGR_wIRZkP2fyic">Read more...</a></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 p-md-2 my-3 ">
+                        <div class="d-flex flex-column rounded">
+                            <img class="event-img rounded mb-2" src="./img/2 QAD Magazine February 2022.png" alt="">
+                            <div>February 2022 Issue <a href="https://drive.google.com/drive/folders/1pjT0fuBMC5rkkmyGfGGR_wIRZkP2fyic">Read more...</a></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 p-md-2 my-3 ">
+                        <div class="d-flex flex-column rounded">
+                            <img class="event-img rounded mb-2" src="./img/3 QAD Magazine March 2022.png" alt="">
+                            <div>March 2022 Issue <a href="https://drive.google.com/drive/folders/1pjT0fuBMC5rkkmyGfGGR_wIRZkP2fyic">Read more...</a></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 p-md-2 my-3 ">
+                        <div class="d-flex flex-column rounded">
+                            <img class="event-img rounded mb-2" src="./img/4 QAD Magazine April 2022.png" alt="">
+                            <div>April 2022 Issue <a href="https://drive.google.com/drive/folders/1pjT0fuBMC5rkkmyGfGGR_wIRZkP2fyic">Read more...</a></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 p-md-2 my-3 ">
+                        <div class="d-flex flex-column rounded">
+                            <img class="event-img rounded mb-2" src="./img/5 QAD Magazine May 2022.png" alt="">
+                            <div>May 2022 Issue <a href="https://drive.google.com/drive/folders/1pjT0fuBMC5rkkmyGfGGR_wIRZkP2fyic">Read more...</a></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 p-md-2 my-3">
+                        <div class="event-img d-flex flex-column rounded">
+                            <img class="event-img rounded mb-2" src="./img/6 QAD Magazine June 2022.png" alt="">
+                            <div>June 2022 Issue <a href="https://drive.google.com/drive/folders/1pjT0fuBMC5rkkmyGfGGR_wIRZkP2fyic">Read more...</a></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 p-md-2 my-3">
+                        <div class="d-flex flex-column rounded">
+                            <img class="event-img rounded mb-2" src="./img/7 QAD Magazine July 2022.png" alt="">
+                            <div>July 2022 Issue <a href="https://drive.google.com/drive/folders/1pjT0fuBMC5rkkmyGfGGR_wIRZkP2fyic">Read more...</a></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 p-md-2 my-3">
+                        <div class="d-flex flex-column rounded">
+                            <img class="event-img rounded mb-2" src="./img/8 QAD Magazine August 2022.png" alt="">
+                            <div>August 2022 Issue <a href="https://drive.google.com/drive/folders/1pjT0fuBMC5rkkmyGfGGR_wIRZkP2fyic">Read more...</a></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 p-md-2 my-3">
+                        <div class="d-flex flex-column rounded">
+                            <img class="event-img rounded mb-2" src="./img/9 QAD Magazine September 2022.png" alt="">
+                            <div>September 2022 Issue <a href="https://drive.google.com/drive/folders/1pjT0fuBMC5rkkmyGfGGR_wIRZkP2fyic">Read more...</a></div>
+                        </div>
+                    </div>
+                   
                 </div>
-                <div class="col-md-4">
-                  <div class="mb-1 pb-2"><a href=""><img src="./img/QAD pro final.png" alt=""></a></div>
-                </div>
-                <div class="col-md-4">
-                  <div class="mb-1 pb-2"><a href=""><img src="./img/ISO sys final.png" alt=""></a></div>
-                </div>
-              </div>
             </div>
-          </div> -->
+          </div>
+
           <div class="footer_start container-fluid">
             <div class="container py-5 text-center">
               <div class="wrapper">
