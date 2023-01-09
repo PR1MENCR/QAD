@@ -317,7 +317,7 @@ canvas{display:block;vertical-align:bottom}
     align-items: center;
     margin-left: 60px;
     height: 100%;
-    gap: 80px;
+    gap: 50px;
 }
 
 .main .footer_header .image_system img{
