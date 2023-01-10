@@ -267,8 +267,9 @@
           <div class="site-map d-flex px-4 my-3">
             <p class="p-0">YOU ARE HERE. HOME</p>
           </div>
+          <!-- landing -->
           <div id="slider" class="container-fluid my-3 my-md-0 mb-5 ">
-            <div class="container" >
+            <div class="container" style="margin-bottom: 100px;">
               <div class="row">
                 <div class="mb-5 mb-lg-0">
                   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -310,21 +311,30 @@
               </div>
             </div>
           </div>
-          <!-- <div class="system container-fluid mt-5">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="mb-1 pb-2"><a href="https://drive.google.com/file/d/1Qu91tUt4aQGjBNeXmO-oiPJEaTpGK8O8/view?fbclid=IwAR1HHazF1A2zCsgiRoJHyvKzefVB2TUWQFNU7fBYDTKNOrzBl4EuQsxH72M"><img src="./img/SFAST.png" alt=""></a></div>
-                </div>
-                <div class="col-md-4">
-                  <div class="mb-1 pb-2"><a href=""><img src="./img/QAD pro final.png" alt=""></a></div>
-                </div>
-                <div class="col-md-4">
-                  <div class="mb-1 pb-2"><a href=""><img src="./img/ISO sys final.png" alt=""></a></div>
-                </div>
+          <!-- video -->
+          <div class="container videos_qad_container p-0" style="margin-bottom: 80px;">
+            <div class="vid_qad_wrapper row" >
+              <div class="pt-3 col-md-6 d-flex justify-content-center">
+                <iframe src="https://drive.google.com/file/d/1bm25hTA3GnGi7RW34wfHHS9QRpFQktLe/preview" width="560" height="300" allow="autoplay"></iframe>
+              </div>
+              <div class="pt-3 col-md-6 d-flex justify-content-center">
+                <iframe src="https://drive.google.com/file/d/11ZunlYNAfxj1youxeJ-tPZWlYmvsTR7T/preview" width="560" height="300" allow="autoplay"></iframe>
+              </div>
+              <div class="pt-3 col-md-6 d-flex justify-content-center">
+                <iframe src="https://drive.google.com/file/d/1THrZxG6IwTMufYxda6aVTmRb5rhIfMDQ/preview" width="560" height="300" allow="autoplay"></iframe>
+              </div>
+              <div class="pt-3 col-md-6 d-flex justify-content-center">
+                <iframe src="https://drive.google.com/file/d/1_taSN_m10YW1PeUsrsj4V9vmgdAi2f1v/preview" width="560" height="300" allow="autoplay"></iframe>
               </div>
             </div>
-          </div> -->
+          </div>
+
+          <div class="fade_slider container">
+            <div class="fade_slider_content" style="background-image: url('./img/slider/Prime\ Automation1.png');"></div>
+            <div class="fade_slider_content" style="background-image: url('./img/slider/Prime\ Automation2.png');"></div>
+            <div class="fade_slider_content" style="background-image: url('./img/slider/Prime\ Automation3.png');"></div>
+          </div>
+
           <div class="footer_start container-fluid">
             <div class="container py-5 text-center">
               <div class="wrapper">
@@ -412,63 +422,7 @@
               </div>
         </div>
     </div>
-    <div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div id="loginform" class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form id="login-form">
-              <div class="form-group">
-                <label for="login-email">Email address</label>
-                <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp" placeholder="Email Address" required>
-              </div>
-              <div class="form-group">
-                <label for="login-password">Password</label> 
-                <input type="password" class="form-control" id="login-password" placeholder="Choose Password" required>
-                <p class="error text-danger"></p>
-              </div>
-              <div class="modal-footer">
-                <button type="submit" class="btn text-white" style="background: #0F3460;">Log In</button>
-                
-              </div>
-            </form>
-          </div>
-      
-        </div>
-        <div id="success" class="modal-content">
-          <div class="p-2 px-3 d-flex justify-content-between align-items-center">
-            <h3 class="m-0">Success 
-            </h3>
-            <i class="fa fa-check-square text-success" style="font-size:48px;"></i>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <script>
-      var config = {
-      apiKey: "AIzaSyAsc9VH1T4NCmdoE6YoV4ES5nQlvdiLXOI",
-      authDomain: "qad-33bed.firebaseapp.com",
-      projectId: "qad-33bed",
-      storageBucket: "qad-33bed.appspot.com",
-      messagingSenderId: "781570120119",
-      appId: "1:781570120119:web:d67f78d8ea79347954f032",
-      measurementId: "G-KK2WSW2HSF"
-    };
-
-    firebase.initializeApp(config);
-    const db = firebase.firestore();
-    const auth = firebase.auth();
-
-    db.settings({ timestampsInSnapshots: true });
-  
-
-</script>
 <script type="text/javascript" id="gwt-pst">
   (function(d, eId) {
     var js, gjs = d.getElementById(eId);
@@ -493,12 +447,6 @@
   })
 
 
-  // accessibility tools
-  const img_accessibiility = document.querySelector('.img_button')
-  const accessibility_tools = document.querySelector('.accessibility_tools')
-  img_accessibiility.addEventListener('click', () => {
-    accessibility_tools.classList.toggle('active')
-  })
 
   //Whatever done by the dompany it should be always together 
   
@@ -515,6 +463,31 @@
     })
   })
   
+  // slider
+  
+function slideshow() {
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.querySelectorAll(".fade_slider_content");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.visibility = "hidden";
+        slides[i].style.opacity = 0;
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1
+    }
+    slides[slideIndex-1].style.visibility = "visible";
+    slides[slideIndex-1].style.opacity = 1;
+    setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+}
+
+slideshow();
   </script>
 <!-- <script src="./fb.js"></script> -->
 <!-- <script src="./auth.js"></script> -->
