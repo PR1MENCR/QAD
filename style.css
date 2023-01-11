@@ -491,10 +491,30 @@ canvas{display:block;vertical-align:bottom}
     height: 100%;
     transition: all 0.5s ease;
 }
-
-.container .videos_qad_container{
-
+.videos_qad_container .video{
+    position: relative;
 }
+.videos_qad_container .video::after{
+
+    position: absolute;
+    color: #fff;
+    bottom: 10px;
+    left: 10px;
+    font-weight: 600;
+}
+.videos_qad_container .video:nth-child(1)::after{
+    content: 'QuAD PRO';
+}
+.videos_qad_container .video:nth-child(2)::after{
+    content: 'ISO SYS';
+}
+.videos_qad_container .video:nth-child(3)::after{
+    content: 'PRIME SFAST';
+}
+.videos_qad_container .video:nth-child(4)::after{
+    content: 'OP DASH';
+}
+
 @media (min-width: 1400px){
     .container.videos_qad_container{
         max-width: 1100px !important;

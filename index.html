@@ -277,20 +277,19 @@
                       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                     </div>
                     <div class="carousel-inner">
                       <div class="carousel-item active" style="transition: 0.3s ease;">
-                        <img  src="./img/Slider1.png" class="d-block w-100" alt="...">
+                        <img src="./img/Slider1.png" class="d-block w-100 slider_landing" alt="...">
+                      </div>
+                      <div class="carousel-item" style="transition: 0.3s ease; ">
+                        <img  src="./img/Slider2.png" class="d-block w-100 slider_landing" alt="...">
+                      </div>
+                      <div class="carousel-item" style="transition: 0.3s ease;">
+                        <img src="./img/Slider3.png" class="d-block w-100 slider_landing" alt="...">
                       </div>
                       <!-- <div class="carousel-item" style="transition: 0.3s ease;">
-                        <img  src="./img/web banner 1.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item" style="transition: 0.3s ease;">
-                        <img src="./img/web banner 2.png" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item" style="transition: 0.3s ease;">
-                        <img src="./img/web banner 3.png" class="d-block w-100" alt="...">
+                        <img src="./img/web banner 4.png" class="d-block w-100" alt="...">
                       </div> -->
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -311,20 +310,30 @@
               </div>
             </div>
           </div>
+          <!-- title home -->
+          <div class="container text-center" >
+            <h3 class="m-0">DepEd NCR PR1ME Automation lodged at the Quality Assurance Division (QAD)</h3>
+            <p>A project of Regional Director Wilfredo E. Cabral, CESO III</p>
+
+          </div>
           <!-- video -->
           <div class="container videos_qad_container " style="margin-bottom: 40px;">
             <div class="vid_qad_wrapper row" >
-              <div class="pt-2 px-0 col-md-3 d-flex justify-content-center">
+              <div class="pt-2 px-0 col-md-3 d-flex justify-content-center video">
                 <iframe src="https://drive.google.com/file/d/1bm25hTA3GnGi7RW34wfHHS9QRpFQktLe/preview"  width="100%" height="200" allow="autoplay"></iframe>
+                <!-- <span>QuAD PRO</span> -->
               </div>
-              <div class="pt-2 px-0 col-md-3 d-flex justify-content-center">
-                <iframe src="https://drive.google.com/file/d/11ZunlYNAfxj1youxeJ-tPZWlYmvsTR7T/preview"  width="100%" height="200" allow="autoplay"></iframe>
+              <div class="pt-2 px-0 col-md-3 d-flex justify-content-center video">
+                <iframe src="https://drive.google.com/file/d/1zT_Hg9Ce8Vg3Yj7IEoC2EqmrJh5x64dM/preview" width="100%" height="200" allow="autoplay"></iframe>
+                <!-- <span>ISO SYS</span> -->
               </div>
-              <div class="pt-2 px-0 col-md-3 d-flex justify-content-center">
+              <div class="pt-2 px-0 col-md-3 d-flex justify-content-center video">
                 <iframe src="https://drive.google.com/file/d/1THrZxG6IwTMufYxda6aVTmRb5rhIfMDQ/preview" width="100%" height="200" allow="autoplay"></iframe>
+                <!-- <span>PRIME SFAST</span> -->
               </div>
-              <div class="pt-2 px-0 col-md-3 d-flex justify-content-center">
+              <div class="pt-2 px-0 col-md-3 d-flex justify-content-center video">
                 <iframe src="https://drive.google.com/file/d/1_taSN_m10YW1PeUsrsj4V9vmgdAi2f1v/preview" width="100%" height="200" allow="autoplay"></iframe>
+                <!-- <span>OP DASH</span> -->
               </div>
             </div>
           </div>
@@ -335,6 +344,11 @@
             <div class="fade_slider_content" style="background-image: url('./img/slider/Prime\ Automation3.png');"></div>
           </div>
 
+          <div class="bottom_title container text-center">
+            <p class="pt-3">DepEd NCR PR1ME Automation Soft Launch | November 10, 2022 | DepEd NCR Conference Hall</p>
+    
+          
+          </div>
           <div class="footer_start container-fluid">
             <div class="container py-5 text-center">
               <div class="wrapper">
@@ -488,6 +502,14 @@ function showSlides() {
 }
 
 slideshow();
+// slide link
+
+const fade_slider_content = document.querySelectorAll('.slider_landing')
+fade_slider_content.forEach(i => {
+  i.addEventListener('click', () => {
+    window.location.href = 'https://drive.google.com/file/d/1yaruxegG_k8YX5eFOvskTsaoLbXSIBE4/view?usp=sharing'
+  })
+})
   </script>
 <!-- <script src="./fb.js"></script> -->
 <!-- <script src="./auth.js"></script> -->
