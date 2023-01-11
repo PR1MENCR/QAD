@@ -34,8 +34,11 @@
 </head>
 <body >
 <style>
-    .squad p{
+    .rmea_content p{
         text-align: justify;
+    }
+    .rmea_content p:nth-child(3){
+        margin-top: 30px;
     }
 </style>
   <!-- banner -->
@@ -43,7 +46,7 @@
     <div id="landing" class="container-fluid ">
       <div class="px-4 px-md-3 px-lg-5" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%;">
         <div class="mobile_column d-flex align-items-center">
-          <img class="me-md-3 me-lg-4" id="qad_logo" src="../img/QAD Logo FINAL.png" alt="">
+          <img class="me-md-3 me-lg-4" id="qad_logo" src="./img/QAD Logo FINAL.png" alt="">
           <div class="brand">
             <div class="top_brand d-flex flex-column">
               <h3  class="text-light pb-2">Quality Assurance Division</h3>
@@ -188,22 +191,14 @@
     
   </nav>
           <div class="site-map d-flex px-4 my-3">
-            <p class="p-0">YOU ARE HERE. SQUAD PRIME - UP</p>
+            <p class="p-0">YOU ARE HERE. RMEA plus</p>
           </div>
-          
-          <div class="container mt-4 squad mb-5">
-            <h3 class="mb-4">sQuAD pRIMe - UP</h3>
-            <p>sQuAD pRIMe - UP is in line with the commitment of the DepEd National Capital Region to support the Quality Assurance Division (QAD) supervisors in the performance of their mandates and roles, promote the continuing professional development, help supervisors reflect on and assess their own practice. It is anchored on DepEd Order No. 25, s. 2020 also known as the National Adoption and Implementation of the Philippines Professional Standards for Supervisors which clearly articulates a developmental continuum of professional practice that supports supervisors in the conduct of their roles in the regions, divisions, schools and learning centers, and provides clear guidance for career progression. 
-            </p>
-            <p>Through the activity, it is expected that competency-building will be reinforced and strengthened. It shall pave way to the enhancement of competencies of each QAD personnel in various disciplines and thus, shall raise the magnitude of productivity and individual office performance level for the realization of the strategic direction set forth by DepEd Prime NCR for 2023 and beyond.</p>
+          <div class="container">
+            <h3 class="mb-4">Regional Education Summit for Private Schools</h3>
+            <p>As part of the pRiMe NCR Strategic Directions and pursuit of pedagogical innovations, the Quality Assurance Division (QAD)  as one of the Functional Divisions of DepEd-NCR is tasked to promote and protect accountability and transparency in the Region by ensuring compliance with the private basic education institutions with standards of quality basic education specified in DepEd Order No. 88, s. 2010, otherwise known as “2010 Revised Manual of Regulations for Private Schools in Basic Education.”</p>
+            <p>As this pRiMe region is heading towards an inclusive and innovation-driven institution, the role of the private education sector is viewed as an essential counterpart in the delivery of quality service among its clientele. This adheres to the promotion of dynamic governance following the principle of efficient, effective, and economical services being practiced in the regional office. Private school administrators are given the equal opportunity of operating the business under the mandate provided by the Philippine laws and issuances through the Department of Education.  The National Capital Region, DepEd-NCR QAD offers innovations and new programs with an emphasis on regulatory and developmental services to support the operation of basic education among sixteen (16) school division offices. </p>
+            <p>In response, the conduct of the Regional Education Summit for Private Schools is hereby being set to provide an avenue for education key players in the private school to continuously address concerns affecting the operation of private schools in the National Capital Region (NCR). This undertaking aims at setting the best platforms to cascade the policies and updates based on the orders and issuances by the Central Office. Likewise, a mode of recognizing the role of private schools in the delivery of quality education in the country is highlighted through this event.</p>
           </div>
-
-          <div class="fade_slider container">
-            <div class="fade_slider_content" style="background-image: url('../img/slider/sQuAD\ PRIME-UP1.png');"></div>
-            <div class="fade_slider_content" style="background-image: url('../img/slider/sQuAD\ PRIME-UP2.png');"></div>
-            <div class="fade_slider_content" style="background-image: url('../img/slider/sQuAD\ PRIME-UP3.png');"></div>
-          </div>
-
 
           <div class="footer_start container-fluid">
             <div class="container py-5 text-center">
@@ -353,41 +348,40 @@
     })
   })
 
+
+  // accessibility tools
+  const img_accessibiility = document.querySelector('.img_button')
+  const accessibility_tools = document.querySelector('.accessibility_tools')
+  img_accessibiility.addEventListener('click', () => {
+    accessibility_tools.classList.toggle('active')
+  })
+
+  //Whatever done by the dompany it should be always together 
   
-  function slideshow() {
-
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.querySelectorAll(".fade_slider_content");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.visibility = "hidden";
-        slides[i].style.opacity = 0;
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1
-    }
-    slides[slideIndex-1].style.visibility = "visible";
-    slides[slideIndex-1].style.opacity = 1;
-    setTimeout(showSlides, 3000); // Change image every 2 seconds
-}
-}
-
-slideshow();
+  var clicks = 0
+  const font_size = document.querySelectorAll('[data-font-size]')
+  const accessibility_btn = document.querySelectorAll('.a_btn')
+  accessibility_btn.forEach(i => {
+    i.addEventListener('click', (e) => {
+      console.log(e.target)
+      font_size.forEach(size => {
+        clicks += 10;
+          size.style.fontSize = `${clicks}px`
+      })
+    })
+  })
+  
   </script>
 <!-- <script src="./fb.js"></script> -->
 <!-- <script src="./auth.js"></script> -->
 
-  <script src="../particles.js"></script>
-  <script src="../app.js"></script>
+  <script src="./particles.js"></script>
+  <script src="./app.js"></script>
   
-	<script src="../js/jquery.min.js"></script> 
-    <script src="../js/popper.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/main.js"></script> 
+	<script src="./js/jquery.min.js"></script> 
+   <script src="./js/popper.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+   <script src="./js/main.js"></script> 
   <!-- firebase -->
 
 </body>

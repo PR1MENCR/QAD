@@ -63,6 +63,30 @@ html{
     align-items: center;
     cursor: pointer;
 }
+.dropdown-menu li {
+    position: relative;
+    }
+
+    .hoverme .dropdown-submenu{
+    display: none;
+    color: red;
+    position: absolute;
+    left: 100%;
+    top: 0px;
+    }
+
+    .dropdown-menu .dropdown-submenu-left {
+right: 100%;
+left: auto;
+}
+.dropdown-menu > li:hover > .dropdown-submenu {
+display: block;
+color: red;
+}
+.hoverme:hover .dropdown-submenu{
+    display: block;
+color: red;
+}
 /* landing */
 #pst-container div{
     color: #fff;
@@ -185,14 +209,14 @@ color: #fff;
     background-color: rgb(189, 189, 189);
 }
 .dropdown:hover .dropdown-menu {
-    display: block;
+    /* display: block;
     margin-top: 0;
-    animation: visible 0.3s ease-in-out;
+    animation: visible 0.3s ease-in-out; */
  }
- .myul:hover{
+ /* .myul:hover{
     display: block !important;
 
- }
+ } */
  @keyframes visible {
     0%{
         visibility: hidden;
