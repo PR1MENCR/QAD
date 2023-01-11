@@ -34,8 +34,11 @@
 </head>
 <body >
 <style>
-    .squad p{
+    .qadpro p{
         text-align: justify;
+    }
+    .qadpro p:nth-child(3){
+        margin-top: 30px;
     }
 </style>
   <!-- banner -->
@@ -206,22 +209,19 @@
     
   </nav>
           <div class="site-map d-flex px-4 my-3">
-            <p class="p-0">YOU ARE HERE. PROGRAMS AND PROJECTS. SQUAD PRIME - UP</p>
+            <p class="p-0">YOU ARE HERE. INNOVATIONS. PR1ME AUTOMATION. VIRTUAL INSPECTION PROCESS (VIP)</p>
           </div>
-          
-          <div class="container mt-4 squad mb-5">
-            <h3 class="mb-4">sQuAD pRIMe - UP</h3>
-            <p>sQuAD pRIMe - UP is in line with the commitment of the DepEd National Capital Region to support the Quality Assurance Division (QAD) supervisors in the performance of their mandates and roles, promote the continuing professional development, help supervisors reflect on and assess their own practice. It is anchored on DepEd Order No. 25, s. 2020 also known as the National Adoption and Implementation of the Philippine Professional Standards for Supervisors which clearly articulates a developmental continuum of professional practice that supports supervisors in the conduct of their roles in the regions, divisions, schools and learning centers, and provides clear guidance for career progression. 
-            </p>
-            <p>Through the activity, it is expected that competency-building will be reinforced and strengthened. It shall pave way to the enhancement of competencies of each QAD personnel in various disciplines and thus, shall raise the magnitude of productivity and individual office performance level for the realization of the strategic direction set forth by DepEd Prime NCR for 2023 and beyond.</p>
-          </div>
-
-          <div class="fade_slider container">
-            <div class="fade_slider_content" style="background-image: url('../img/slider/sQuAD\ PRIME-UP1.png');"></div>
-            <div class="fade_slider_content" style="background-image: url('../img/slider/sQuAD\ PRIME-UP2.png');"></div>
-            <div class="fade_slider_content" style="background-image: url('../img/slider/sQuAD\ PRIME-UP3.png');"></div>
-          </div>
-
+          <div class="container qadpro">
+            <h3 class="mb-4">
+                Virtual Inspection Process (VIP)
+            </h3>
+            <p>Amidst COVID-19 Pandemic challenges in the country and the prevailing new norm informed by the Inter-agency Task Force for the Management of Emerging Infectious Diseases (IATF), the Department of Health (DOH) and the World Health Organization (WHO), delivery of Quality Assurance core services should continue as stated in the Quality Assurance Division (QAD) comprehensive "Service Continuity Plan" (SCP). The QAD-SCP is anchored on the national policies on public service continuity for government agencies by the National Disaster Risk Reduction Management Council and the Civil Service Commission's "Revised Interim Guidelines for Alternative Work Arrangements and Support Mechanisms for Workers in the Government During the Period of State of National Emergency Due to COVID-19 Pandemic".</p>
+            <p>Under the state of national emergency, the Regional QAD should persists to deliver its core business services to its clientele such as the processing and issuance of various permits/recognition to qualified private schools that are compliant with the minimum requirements stated in DO 88, s. 2010, "2010 Revised Manual of Regulations for Private Schools in Basic Education". More specifically, section 30.6 of DO 88, s. 2010, states the need for the conduct of by a QAD EPS to "a thorough inspection of the school..." compliance with the requirements..." (DO 88, s. 2010, 36), is mandatory under normal conditions, i.e., in the absence of pandemic/national emergency. The need to continually provide the above services so that education can be continually made available by private school counterparts, calls for the need to change the modality of school visits from actual face-to-face to a virtual inspection, in compliance with DepEd Order No. 14, s. 2020, "Guidelines in the Required Health Standards in Basic Education Offices and Schools".</p>
+            <p>Furthermore, while virtual, real-time inspection will be espoused, the Regional QAD Education Program EPSs (EPSs) continues to uphold its key values relevant in carrying out its core services, such as, integrity, accountability, and transparency, to gain and maintain the trust of all its internal and external stakeholders in the National Capital Region (NCR). Thus, this "Internal Policy Guidelines in the Processing of Application for Permits/Recognition of Private Schools in Response to COVD19 Pandemic Situation", was conceptualized.</p>
+        </div>
+        <div class="container d-flex justify-content-center">
+          <iframe src="https://drive.google.com/file/d/1QHwj17gcJPMMGQcV7XD_rmw4uWTEqote/preview" width="100%" height="480" allow="autoplay"></iframe>
+        </div>
 
           <div class="footer_start container-fluid">
             <div class="container py-5 text-center">
@@ -371,30 +371,17 @@
     })
   })
 
+
+  // accessibility tools
+  const img_accessibiility = document.querySelector('.img_button')
+  const accessibility_tools = document.querySelector('.accessibility_tools')
+  img_accessibiility.addEventListener('click', () => {
+    accessibility_tools.classList.toggle('active')
+  })
+
+  //Whatever done by the dompany it should be always together 
+
   
-  function slideshow() {
-
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.querySelectorAll(".fade_slider_content");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.visibility = "hidden";
-        slides[i].style.opacity = 0;
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1
-    }
-    slides[slideIndex-1].style.visibility = "visible";
-    slides[slideIndex-1].style.opacity = 1;
-    setTimeout(showSlides, 3000); // Change image every 2 seconds
-}
-}
-
-slideshow();
   </script>
 <!-- <script src="./fb.js"></script> -->
 <!-- <script src="./auth.js"></script> -->
@@ -403,9 +390,9 @@ slideshow();
   <script src="../app.js"></script>
   
 	<script src="../js/jquery.min.js"></script> 
-    <script src="../js/popper.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/main.js"></script> 
+   <script src="../js/popper.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+   <script src="../js/main.js"></script> 
   <!-- firebase -->
 
 </body>

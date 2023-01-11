@@ -66,18 +66,20 @@ html{
 .dropdown-menu li {
     position: relative;
     }
-
+    .hoverme a{
+        pointer-events: none;
+    }
     .hoverme .dropdown-submenu{
     display: none;
     color: red;
     position: absolute;
-    left: 100%;
+    right: 100%;
     top: 0px;
     }
 
     .dropdown-menu .dropdown-submenu-left {
-right: 100%;
-left: auto;
+/* left: 100%;
+right: auto; */
 }
 .dropdown-menu > li:hover > .dropdown-submenu {
 display: block;
@@ -507,7 +509,7 @@ canvas{display:block;vertical-align:bottom}
     width: 100%;
     position: relative;
  }
- .fade_slider::after{
+ .fade_slider.index::after{
     content: 'DepEd NCR PR1ME Automation Soft Launch | November 10, 2022 | DepEd NCR Conference Hall';
     position: absolute;
     bottom: 10px;
