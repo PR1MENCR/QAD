@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QAD</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- <link rel="stylesheet" href="./bootstrap.css"> -->
+<!-- tume -->
+<!-- <link rel="stylesheet" href="css/widget.css" type="text/css" media="screen" /> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.cdnfonts.com/css/old-english-five" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://www.fontspace.com/old-english-five-font-f44962">
+     <!-- firebase -->
+     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+</head>
+<body >
+<style>
+    .summit p{
+        text-align: justify;
+        margin-bottom: 5px;
+    }
+    .summit span{
+      padding-bottom: 5px;
+    }
+</style>
+  <!-- banner -->
+  <div id="particles-js">
+    <div id="landing" class="container-fluid ">
+      <div class="px-4 px-md-3 px-lg-5" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%;">
+        <div class="mobile_column d-flex align-items-center">
+          <img class="me-md-3 me-lg-4" id="qad_logo" src="../img/QAD Logo FINAL.png" alt="">
+          <div class="brand">
+            <div class="top_brand d-flex flex-column">
+              <h3  class="text-light pb-2">Quality Assurance Division</h3>
+            </div>
+            <span class="my_guhit"></span>
+            <span data-font-size="fontsize" class="brand_span mb-4">DEPARTMENT OF EDUCATION - NATIONAL CAPITAL REGION</span>
+
+          </div>
+          <div class="date large-3 columns">
+            <div id="text-1" class="ear-content widget anchor widget_text">	
+                  <div class="textwidget">
+                    <div id="pst-container">
+                      <div data-font-size="fontsize">Philippine Standard Time:</div><div id="pst-time"></div>
+                  </div>
+                </div>
+              </div>						
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="main">
+      
+     <!-- navigation -->
+     <nav class="mynav navbar navbar-expand-xl navbar-light p-0 px-4 px-md-4 px-lg-5 py-1 py-lg-0">
+      <div class="nav_bar_nav">
+        <div class="nav2 ">
+          <div class="mybutton">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        
+          </div>
+      
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="time">
+              <!-- <p>time</p> -->
+            </div>
+            <ul class="navbar-nav text-white w-100"> 
+              <li class="nav-item me-0 mt-3 mt-lg-0 mb-2 mb-lg-0 me-lg-2 me-lg-3">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
+                <a class="nav-link P-0" data-bs-toggle="collapse" data-bs-target="#About" href="" id="navbarDarkDropdownMenuLink"aria-describedby="false">
+                  About
+                </a>
+                <div class="collapse" id="About" style="transition: 0.3s ease;">
+                  <ul class="p-0" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li class="list_blue"><a class="dropdown-item dropdown-item-dark" href="../AboutPage/aboutRegion.html">DepEd NCR</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../AboutPage/aboutUs.html">The QAD</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../dataprivacy.html">Data Privacy Notice</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../transparency.html">Transparency Seal</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item dropdown me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
+                <a class="nav-link P-0" data-bs-toggle="collapse" data-bs-target="#About" href="" id="navbarDarkDropdownMenuLink"aria-describedby="false">
+                  Program and Projects
+                </a>
+                <div class="collapse" id="About" style="transition: 0.3s ease;">
+                  <ul class="p-0" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li class="list_blue"><a class="dropdown-item dropdown-item-dark" href="../program_and_projects_htmls/Rmea.html">RMEA plus</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../program_and_projects_htmls/squad_prime.html">sQuAD pRIMe - UP</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../program_and_projects_htmls/summit.html">Regional Education Summit for Private Schools</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../program_and_projects_htmls/km.html">KM Handholding Session</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item dropdown me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
+                <a class="nav-link P-0" data-bs-toggle="collapse" data-bs-target="#About" href="" id="navbarDarkDropdownMenuLink"aria-describedby="false">
+                  Innovations
+                </a>
+                <div class="collapse" id="About" style="transition: 0.3s ease;">
+                  <ul class="p-0" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li class="hoverme list_blue">
+                      <a class="dropdown-item" href="../AboutPage/aboutUs.html">PR1ME Automation</a>
+
+                        <ul class="dropdown-menu dropdown-submenu">
+                          <li>
+                            <a class="dropdown-item" href="../prime_automation/qadpro.html">Quality Assurance Division Permit and Recognition Optimizer (QuADPRO)</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="../prime_automation/isosys.html">Issuance of Special Order System (ISO SYS)</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="../prime_automation/primesfast.html">PRIME School Fees Application Sys Tech (PRIME SFAST)</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="../prime_automation/opdash.html">Office Performance Information Dashboard (OP DASH)</a>
+                          </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="list_blue"><a class="dropdown-item dropdown-item-dark" href="../prime_automation/vip.html">Virtual Inspection Process (VIP)</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item dropdown me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
+                <a class="nav-link P-0" data-bs-toggle="collapse" data-bs-target="#pRiMe" href="" id="navbarDarkDropdownMenuLink"aria-describedby="false">
+                  Services
+                </a>
+                <div class="collapse" id="pRiMe" style="transition: 0.3s ease;">
+                  <ul class="p-0" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">Issuance of New Government Permit to Operate Schools</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">Re-Issuance of Government Permit to Operate Schools</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">Issuance of Government Recognition to Private Schools</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">Re-Issuance of Government Recognition to Private Schools</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">Issuance of Special Order</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">Issuance of Government Permit for Increase in Tuition and Other School Fees</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">Issuance of Government Permit for Senior High School Program</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">Issuance of Government Permit for Implementation of Public Senior High School Program</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">Issuance of Government Permit on Establishment of Stand-Alone SHSs</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">Issuance of Government Permit for Public School Homeschooling Program</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">Issuance of Government Permit for Private School Homeschooling Program</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">Acknowledgement of Special Science Elementary Schools (SSES)</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">Acknowledgement of Science, Technology, and Engineering (STE) Program</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">Issuance of Certificate of Closure to Private Schools</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">Issuance of Certificate of One and the Same School</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">Issuance of Certificate of Good Standing</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">Issuance of Certificate of Temporary and Permanent Closure</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item  me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
+                <a class="nav-link " href="../issuances.html">
+                  Issuances
+                </a>
+              </li>
+        
+              <li class="nav-item dropdown me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
+                <a class="nav-link P-0" data-bs-toggle="collapse" data-bs-target="#Resources" href="" id="navbarDarkDropdownMenuLink"aria-describedby="false">
+                  Resources
+                </a>
+                <div class="collapse" id="Resources" style="transition: 0.3s ease;">
+                  <ul class="p-0" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../resources.html">DepEd TV</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../resources.html">Facts and Figures</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../news&features.html">News and Features</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item dropdown me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
+                <a class="nav-link P-0" data-bs-toggle="collapse" data-bs-target="#qadi" href="" id="navbarDarkDropdownMenuLink"aria-describedby="false">
+                  Contact Us
+                </a>
+                <div class="collapse" id="qadi" style="transition: 0.3s ease;">
+                  <ul class="p-0" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../theQADi.html">Feedback</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLScn8NxMYLJI4O1imG_-cMhwNSf0I6pUtT7iXegLxjH5t573gg/formrestricted" target="_blank">i-Share Participation Tool</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSdRgF48suae9-I9Ih81Pa6XA8YyY91EBu_Z0rbPuDVTLTmpSQ/viewform?fbclid=IwAR2Bwnj7jVwbGsrzEzZOnZEDJgtqy4Fp-11zjOufTMipiNNOV3FNwWPX_t0">Client Satisfaction Survey</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+  
+        </div>
+      </div>
+    
+  </nav>
+          <div class="site-map d-flex px-4 my-3">
+            <p class="p-0">YOU ARE HERE. SERVICES. ISSUANCE OF GOVERNMENT RECOGNITION TO PRIVATE SCHOOLS</p>
+          </div>
+          <div class="container summit">
+            <h3 class="mb-4">
+                Issuance of Government Recognition to Private Schools
+            </h3>
+            <div class="column mb-3">
+              <i><strong>Who may avail of the service?</strong></i>
+              <p>Private School (Kindergarten/Elementary/Junior High School/SPED) from different divisions of National Capital Region</p>
+            </div>
+            <div class="column">
+              <i><strong>What are the requirements?</strong></i>
+              <p>1. Application Letter addressed to the Regional Director through the Schools Division Superintendent</p>
+              <p>2. SEC Certificate of Registration with Articles of Incorporation and By-Laws in the name of the school</p>
+              <p>3. School Child Protection Policy (SCPP) with Anti-Bullying Policy pursuant to DepEd Order No. 40, s. 2012 and DepEd Order No. 55 s. 2013 </p>
+              <p>4. School Site/ Documents of Ownership (Certified True Copy of TCT)</p>
+              <p>5. Certificate of Occupancy of school building (Certified True Copy by the issuing authority)</p>
+              <p>6. List of laboratory facilities, equipment, furniture, supplies and materials</p>
+              <p>7. List of library holdings</p>
+              <p>8. List of athletic facilities, equipment, supplies and materials</p>
+              <p>9. Original pictures of the following facilities:</p>
+              <div class="list d-flex flex-column">
+                <span> - classrom</span>
+                <span> - Laboratory/ies</span>
+                <span> - School Canteen</span>
+                <span> - Flagpole</span>
+                <span> - Computer/IT/Multimedia Room</span>
+                <span> - Faculty Room</span>
+                <span> - Science Laboratory/ies</span>
+                <span> - School buildings</span>
+                <span> - Library</span>
+                <span> - Guidance Office</span>
+                <span> - Playground</span>
+                <span> - Principal’s Office</span>
+                <span> - Industrial Arts Room</span>
+                <span> - Restrooms </span>
+                <span> - Medical & Dental Clinic</span>
+                <span> - School Stage </span>
+                <span> - TLE/EPP Practice House</span>
+
+              </div>
+              <p>10. Proposed Annual Budget for the School Year signed by the School Head</p>
+              <p>11. Proposed Tuition and Other School Fees for the School Year signed by the School Head</p>
+              <p>12. Latest certificate of Bank Deposit in the name of the school <i>(adequate funds to support operation for one year)</i> </p>
+              <p>13. Proposed Curriculum requirements based on DepEd Order No. 21 s. 2019</p>
+              <p>14. List of Administrative, Teaching and Non-Teaching Personnel</p>
+              <div class="list d-flex flex-column">
+                <span> - School Head/ President/ Director</span>
+                <span> - School Head/ President/ Director NBI/PNP Clearance</span>
+                <span> - Salary Rate and Benefits of Officials</span>
+                <span> - Academic Non-Teaching Personnel</span>
+                <span> - Supervisory Officials/Principal</span>
+                <span> - Academic Teaching Personnel</span>
+              </div>
+              <p>15. School Initiated Retirement Plan and School Certificate of Registration for SSS, Pag-IBIG, and PhilHealth</p>
+              <p>16. School Calendar with Number of School Days and Holidays</p>
+              <p>17. Need Demand for the establishment of the school</p>
+              <p>18. Student/School Manual</p>
+              <p>19. Application/Inspection Fee</p>
+            </div>
+          </div>
+          <div class="footer_start container-fluid">
+            <div class="container py-5 text-center">
+              <div class="wrapper">
+                <p class="m-0">How are we doing? Help us to improve our services. Your feedback matters to us.</p>
+                <a class="m-0" href="https://docs.google.com/forms/d/e/1FAIpQLSdRgF48suae9-I9Ih81Pa6XA8YyY91EBu_Z0rbPuDVTLTmpSQ/viewform?fbclid=IwAR2Bwnj7jVwbGsrzEzZOnZEDJgtqy4Fp-11zjOufTMipiNNOV3FNwWPX_t0">take our Client Satisfaction Survey</a>
+              </div>
+              <div class="wrappere">
+                <p class="m-0">Thank you for browsing the QAD-i. You are visitor no.:</p>
+                <div id="sfc76wnfcs8c8czec2ppm8hleml1h8637zn"></div>
+                <script type="text/javascript" src="https://counter9.stat.ovh/private/counter.js?c=76wnfcs8c8czec2ppm8hleml1h8637zn&down=async" async></script>
+                <noscript><a href="https://www.freecounterstat.com" title="free hit counter"><img src="https://counter9.stat.ovh/private/freecounterstat.php?c=76wnfcs8c8czec2ppm8hleml1h8637zn" border="0" title="free hit counter" alt="free hit counter"></a></noscript>   
+              </div>
+              <div class="wrapper">
+                <p class="m-0">What do you think of our website? We want to hear from you.</p>
+                <a class="m-0" href="https://docs.google.com/forms/d/e/1FAIpQLScn8NxMYLJI4O1imG_-cMhwNSf0I6pUtT7iXegLxjH5t573gg/viewform">i-Share Participation Tool</a>
+              </div>
+              <a class="contact_us_footer" href="../theQADi.html">Contact us here</a>
+            </div>
+          </div>
+          <!-- footer -->
+          <div class="footer_header container-fluid">
+            <div class="container_system d-flex align-items-center">
+              <div class="image_system ">
+                <img src="../img/Prime Automation Logo ONLY.png" alt="">
+              </div>
+              <div class="center ">
+                <div class=" con">
+                  <img src="../img/QuAD PRO.png" alt="">
+                </div>
+                <div class="con">
+                  <img src="../img/ISO syss.png" alt="">
+                </div>
+                <div class="con">
+                  <img src="../img/SFAST.png" alt="">
+                </div>
+                <div class="con">
+                  <img src="../img/OP DASHh.png" alt="">
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div id="footer" class="container-fluid mt-0 py-5 px-2 px-lg-5">
+              <div class="footer_content">
+                <div class="seal">
+                  <img class="govphseal" src="../img/govph seal.png" alt="">
+                </div>
+                <div class="footer_details">
+                  <div class="rep">
+                    <p>REPUBLIC OF THE PHILIPPINES</p>
+                    <span>All content is in the public domain unless otherwise stated.</span>
+                  </div>
+                  <div class="about">
+                    <p>ABOUT GOVPH</p>
+                    <span>Learn more about the Philippine government, its structure, how government works and the people behind it.</span>
+                    <div class="gov_footer mt-3 d-flex flex-column">
+                      <a href="https://www.gov.ph/">GOV.PH</a>
+                      <a href="https://www.officialgazette.gov.ph/">Official Gazette</a>
+                      <a href="https://data.gov.ph/index/home">Open Data Portal</a>
+                    </div>
+                  </div>
+                  <div class="gov_link">
+                    <div class="links">
+                      <p>GOVERNMENT LINKS</p>
+                      <a href="https://op-proper.gov.ph/">Office of the President</a>
+                      <a href="https://ovp.gov.ph/">Office of the Vice President</a>
+                      <a href="https://legacy.senate.gov.ph/">Senate of the Philippines</a>
+                      <a href="https://sc.judiciary.gov.ph/">Supreme Court</a>
+                      <a href="http://ca.judiciary.gov.ph/">Court of Appeals</a>
+                      <a href="https://sb.judiciary.gov.ph/">Sandiganbayan</a>
+                    </div>
+                  </div>
+                  <div class="logos">
+                    <div class=""><a target="_blank" href="https://www.foi.gov.ph/"><img class="small_logo" src="../img/freedom of information.png" alt=""></a></div>
+                    <div class=""><a target="_blank" href="./transparency.html"><img src="../img/transparency-seal-160x160.png" alt=""></a></div>
+                    <div class=""><a target="_blank" href="https://pqf.gov.ph/Home/Details/11"><img src="../img/pqf logo.png" alt=""></a></div>
+                    <div class=""><a target="_blank" href="https://depedictncr.wordpress.com/?fbclid=IwAR2hHeCHUKXy9ncAhUvebz817Sl58DZcxvkuF3_1oFLk6_6O6Rw3GFjyIlE"><img src="../img/DepEd NCR logo.png" alt=""></a></div>
+                  </div>
+                </div>
+                  <span class="last">
+                    <p>
+                      Managed by DepEd NCR Quality Assurance Division (QAD)
+                    </p>
+                  </span>
+              </div>
+        </div>
+    </div>
+    <div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div id="loginform" class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="login-form">
+              <div class="form-group">
+                <label for="login-email">Email address</label>
+                <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp" placeholder="Email Address" required>
+              </div>
+              <div class="form-group">
+                <label for="login-password">Password</label> 
+                <input type="password" class="form-control" id="login-password" placeholder="Choose Password" required>
+                <p class="error text-danger"></p>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn text-white" style="background: #0F3460;">Log In</button>
+                
+              </div>
+            </form>
+          </div>
+      
+        </div>
+        <div id="success" class="modal-content">
+          <div class="p-2 px-3 d-flex justify-content-between align-items-center">
+            <h3 class="m-0">Success 
+            </h3>
+            <i class="fa fa-check-square text-success" style="font-size:48px;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script type="text/javascript" id="gwt-pst">
+  (function(d, eId) {
+    var js, gjs = d.getElementById(eId);
+    js = d.createElement('script'); js.id = 'gwt-pst-jsdk';
+    js.src = "//gwhs.i.gov.ph/pst/gwtpst.js?"+new Date().getTime();
+    gjs.parentNode.insertBefore(js, gjs);
+  }(document, 'gwt-pst'));
+  
+  var gwtpstReady = function(){
+    var firstPst = new gwtpstTime('pst-time');
+  }
+
+  const collapseShow = document.querySelectorAll('.collapse')
+  collapseShow.forEach(i => {
+    window.addEventListener('resize', () => {
+    if(window.innerWidth > 992){
+        if(i.classList.contains('show')){
+          i.classList.remove('show')
+        }
+      }
+    })
+  })
+
+
+  // accessibility tools
+  const img_accessibiility = document.querySelector('.img_button')
+  const accessibility_tools = document.querySelector('.accessibility_tools')
+  img_accessibiility.addEventListener('click', () => {
+    accessibility_tools.classList.toggle('active')
+  })
+
+  //Whatever done by the dompany it should be always together 
+
+  
+  </script>
+<!-- <script src="./fb.js"></script> -->
+<!-- <script src="./auth.js"></script> -->
+
+  <script src="../particles.js"></script>
+  <script src="../app.js"></script>
+  
+	<script src="../js/jquery.min.js"></script> 
+   <script src="../js/popper.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+   <script src="../js/main.js"></script> 
+  <!-- firebase -->
+
+</body>
+</html>
