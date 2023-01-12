@@ -513,11 +513,15 @@ canvas{display:block;vertical-align:bottom}
 
 
  .fade_slider{
+
     height: 200px;
     margin: 0 auto;
     position: relative;
     width: 100%;
     position: relative;
+ }
+ .fade_slider.index{
+    cursor: none;
  }
  .fade_slider.index::after{
     content: 'DepEd NCR PR1ME Automation Soft Launch | November 10, 2022 | DepEd NCR Conference Hall';
