@@ -74,6 +74,16 @@
       height: auto;
       width: 100%;
     }
+    .carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
+.carousel-control-prev {
+    /* left: -0%; */
+}
+.carousel-control-next {
+    right: 0;
+}
   </style>
   <!-- banner -->
   <div id="particles-js">
@@ -249,8 +259,71 @@
           <div class="site-map d-flex px-4 my-3">
             <p class="p-0">YOU ARE HERE. QAD MONTHLY STATISTICS REPORT</p>
           </div>
+          <div id="slider" class=" my-3 my-md-0 mb-5 ">
+            <div class="container" style="margin-bottom: 40px;">
+              <div class="row">
+                <div class="mb-5 mb-lg-0 p-0">
+                  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    
+                    <div class="carousel-inner">
+                      <div class="statistic_img carousel-item active" style="transition: 0.3s ease;">
+                        <img src="./img/facts/1 QAD Monthly Statistics as of January 2022.png" class="d-block w-100 slider_landing" alt="...">
+                      </div>
+                      <div class="statistic_img carousel-item" style="transition: 0.3s ease; ">
+                        <img  src="./img/facts/2 QAD Monthly Statistics as of February 2022.png" class="d-block w-100 slider_landing" alt="...">
+                      </div>
+                      <div class="statistic_img carousel-item" style="transition: 0.3s ease;">
+                        <img src="./img/facts/3 QAD Monthly Statistics as of March 2022.png" class="d-block w-100 slider_landing" alt="...">
+                      </div>
+                      <div class="statistic_img carousel-item" style="transition: 0.3s ease;">
+                        <img src="./img/facts/4 QAD Monthly Statistics as of April 2022.png" class="d-block w-100 slider_landing" alt="...">
+                      </div>
+                      <div class="statistic_img carousel-item" style="transition: 0.3s ease;">
+                        <img src="./img/facts/5 QAD Monthly Statistics as of May 2022.png" class="d-block w-100 slider_landing" alt="...">
+                      </div>
+                      <div class="statistic_img carousel-item" style="transition: 0.3s ease;">
+                        <img src="./img/facts/6 QAD Monthly Statistics as of June 2022.png" class="d-block w-100 slider_landing" alt="...">
+                      </div>
+                      <div class="statistic_img carousel-item" style="transition: 0.3s ease;">
+                        <img src="./img/facts/7 QAD Monthly Statistics as of July 2022.png" class="d-block w-100 slider_landing" alt="...">
+                      </div>
+                      <div class="statistic_img carousel-item" style="transition: 0.3s ease;">
+                        <img src="./img/facts/8 QAD Monthly Statistics as of August 2022.png" class="d-block w-100 slider_landing" alt="...">
+                      </div>
+                      <div class="statistic_img carousel-item" style="transition: 0.3s ease;">
+                        <img src="./img/facts/9 QAD Monthly Statistics as of September 2022.png" class="d-block w-100 slider_landing" alt="...">
+                      </div>
+                      <div class="statistic_img carousel-item" style="transition: 0.3s ease;">
+                        <img src="./img/facts/10 QAD Monthly Statistics as of October 2022.png" class="d-block w-100 slider_landing" alt="...">
+                      </div>
+                      <div class="statistic_img carousel-item" style="transition: 0.3s ease;">
+                        <img src="./img/facts/11 QAD Monthly Statistics as of November 2022.png" class="d-block w-100 slider_landing" alt="...">
+                      </div>
+                      <!-- <div class="carousel-item" style="transition: 0.3s ease;">
+                        <img src="./img/web banner 4.png" class="d-block w-100" alt="...">
+                      </div> -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
 
-          <div class="container-fluid">
+
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+
+
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- <div class="container-fluid">
             <div class="container pt-4">
               <h3 class="">QAD Monthly Statistics Report</h3>
               <div class="image data mb-2 p-3">
@@ -298,7 +371,7 @@
                 <div class="data-content pt-2">November 2022 Performance</div>
               </div>
             </div>
-          </div>
+          </div> -->
        
           <div class="footer_start container-fluid">
             <div class="container py-5 text-center">
