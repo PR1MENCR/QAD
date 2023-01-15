@@ -241,7 +241,7 @@ color: #fff;
 
   .dropdown-menu > li > a:hover {
     background-image: none;
-    background-color: rgb(189, 189, 189);
+    /* background-color: rgb(189, 189, 189); */
 }
 .dropdown:hover .dropdown-menu {
     /* display: block;
