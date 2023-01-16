@@ -154,7 +154,17 @@ font-size: 28px;
 canvas{
     position: absolute;
 }
+/* .column{
+    margin-bottom: 1.5rem !important;
+    background: ;
+} */
 
+.summit{
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    
+}
 #landing .brand .top_brand h3{
     font-size: 34px;
 }
