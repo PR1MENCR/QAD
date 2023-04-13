@@ -116,3 +116,15 @@ particlesJS("particles-js", {
   },
   "retina_detect": true
 });
+
+const footerbtn = document.querySelectorAll('.con')
+footerbtn.forEach(img => {
+    img.addEventListener('click', () => {
+      window.location.href = 'https://prime.depedncr.com.ph/'
+    })
+});
+
+const qad_logo = document.querySelector('#qad_logo')
+qad_logo.addEventListener('click', () => {
+  window.location.href = "https://drive.google.com/drive/folders/1N2OgDctYVj1VV5QoZGfIPIyjObMohAJa"
+})
