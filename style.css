@@ -575,6 +575,14 @@ canvas{display:block;vertical-align:bottom}
     font-size: 12px;
     color: #fff;
  }
+ .fade_slider.craw::after{
+    content: 'Commitment Review and Alignment Workshop | March 14-16, 2023 | Travelers Hotel, Subic Bay Freeport Zone, Zambales';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 12px;
+    color: #fff;
+ }
 .fade_slider_content{
     position: absolute;
     top: 0;
