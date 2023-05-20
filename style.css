@@ -1020,3 +1020,16 @@ canvas{display:block;vertical-align:bottom}
         }
 
     }
+
+
+    .qr{
+        height: auto;
+        width: 78px;
+        object-fit: cover;
+      }
+      .qr-text{
+        color: #000;
+        text-decoration: none;
+        text-align:justify;
+        
+      }
