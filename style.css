@@ -151,13 +151,8 @@ font-size: 28px;
     /* font-family: Arial, Helvetica, sans-serif !important; */
     transform: translate(0,-3px);
 }
-@font-face {
-    font-family: yourfontname; 
-    src: url("./old-english-five/Old\ English\ Five.ttf");
-}
 #landing .brand h3{
-    font-family: 'Old English Five', sans-serif;
-                                                
+    color: red;               
 }
 canvas{
     position: absolute;
@@ -174,7 +169,18 @@ canvas{
     
 }
 #landing .brand .top_brand h3{
-    font-size: 34px;
+    padding-bottom: 0 !important;
+    font-size: 36px;
+    font-family: 'trajan_proregular' !important;
+}
+
+@font-face {
+    font-family: 'trajan_proregular';
+    src: url('./font/trajan_pro-webfont.woff2') format('woff2'),
+         url('./font/trajan_pro-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 #landing .brand .my_guhit{
    width: 100%;
@@ -567,7 +573,7 @@ canvas{display:block;vertical-align:bottom}
  .fade_slider.index{
     cursor: none;
  }
- .fade_slider.index::after{
+ .fade_slider .soft_launch::after{
     content: 'DepEd NCR PR1ME Automation Soft Launch | November 10, 2022 | DepEd NCR Conference Hall';
     position: absolute;
     bottom: 10px;
@@ -575,7 +581,7 @@ canvas{display:block;vertical-align:bottom}
     font-size: 12px;
     color: #fff;
  }
- .fade_slider.craw::after{
+ .fade_slider .craw::after{
     content: 'Commitment Review and Alignment Workshop | March 14-16, 2023 | Travelers Hotel, Subic Bay Freeport Zone, Zambales';
     position: absolute;
     bottom: 10px;
