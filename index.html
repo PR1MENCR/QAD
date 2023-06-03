@@ -14,13 +14,14 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- fonts -->
-    <link href="https://fonts.cdnfonts.com/css/old-english-five" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- cdn -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -296,7 +297,7 @@
             <p class="p-0">YOU ARE HERE. HOME</p>
           </div>
           <!-- landing -->
-          <div class="container-fluid px-3 px-lg-5">
+          <div class="container-fluid px-3 px-lg-5 pb-3">
             <div id="slider" class=" my-3 my-md-0 mb-5 ">
               <div class="container-fluid" style="margin-bottom: 40px;">
                 <div class="row">
@@ -345,15 +346,120 @@
             </div>
 
           </div>
+          <style>
+            .services .services_item{
+              display: grid;
+              grid-template-columns: 60px 1fr;
+              margin-bottom: 30px;
+            }
+            .services .services_item:nth-child(3){
+              margin-bottom: 0px;
+            }
+            .services .services_item img{
+              width: 40px;
+              height: auto;
+              /* object-fit: cover; */
+            }
+            .services .services_item h4{
+              color: #F4BB00;
+              font-weight: bold;
+            }
+            .services .services_item .services_right .grid{
+              display: grid;
+              grid-template-columns: 20px 1fr;
+
+            }
+            .services .services_item .services_right .grid i{
+              transform: translateY(5px);
+              font-size: 11px;
+            }
+            .services .services_item .services_right .grid span{
+              font-size: 15px;
+            }
+          </style>
+          <div class="container  mb-5 p-3 px-5 border">
+            <h3 style="font-weight: bold; color: #F4BB00;" class="text-center mb-4">Our Services</h3>
+            <div class="services">
+              <div class="services_item">
+                <img src="./img/Services.png" alt="">
+                <div class="services_right">
+                  <h4> 
+                    Organization Development
+                  </h4>
+                  <div class="grid">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    <span>Organizational Management (Regional Monitoring, Evaluation, and Adjustment - pRiMing up results-driven contributions in KPIs (RMEA plus)</span>
+                  </div>
+                  <div class="grid">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    <span>Quality Assurance, Monitoring and Evaluation (QAME)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="services_item">
+                <img src="./img/Services.png" alt="">
+                <div class="services_right">
+                  <h4> 
+                    Private Education Regulations and Development
+                  </h4>
+                  <div class="grid">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    <span>Review and Development of Policies</span>
+                  </div>
+                  <div class="grid">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    <span>Grant of Permits to Operate and Recognition
+                      <ul class="m-0">
+                        <li>Processing of Private Schools’ Applications for Government Authority (Government Permit: New and Renewal)</li>
+                        <li>Government Recognition</li>
+                        <li>Homeschooling Program</li>
+                        <li>Inclusive Special Education Program</li>
+                        <li>Open High School Program</li>
+                        <li>Re-Issuance of Government Recognition</li>
+                      </ul>
+                    </span>
+                  </div>
+                  <div class="grid">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    <span>Grant of Special Orders (SO) of Private Schools/Technical Vocational Institutions (TVIs/Non-DepEd Public Schools)</span>
+                  </div>
+                  <div class="grid">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    <span>Review and approval of Tuition and Other Fees Increase, No Increase and Proposed New Fees of Private Schools.</span>
+                  </div>
+                  <div class="grid">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    <span>Government Assistance Subsidy</span>
+                  </div>
+                </div>
+              </div>
+              <div class="services_item">
+                <img src="./img/Services.png" alt="">
+                <div class="services_right">
+                  <h4> 
+                    Other Services
+                  </h4>
+                  <div class="grid">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    <span>Facilitation on the Conduct of National Qualifying Examination for School Heads (NQESH)</span>
+                  </div>
+                  <div class="grid">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    <span>Issuance of Regional Order for Establishment, Merging, Conversion, Naming/Renaming, Separation of Annexes in Public Schools</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <!-- title home -->
-          <div class="container text-center pt-3 mb-3 border border-dark p-3" >
-            <h3 class="m-0" style="font-size: 18px;">DepEd-NCR PR1ME Automation lodged at the Quality Assurance Division (QAD)</h3>
-              <h3 style="font-size: 18px;">A project of Regional Director Wilfredo E. Cabral, CESO III</h3>
+          <div class="container text-center pt-3 mb-5 border p-3" >
+            <h3 style="font-weight: bold; color: #F4BB00;" class="text-center ">DepEd-NCR PR1ME Automation <br/>lodged at the Quality Assurance Division (QAD)</h3>
+              <h3 style="font-size: 18px;" class="mb-5">A project of Regional Director Wilfredo E. Cabral, CESO III</h3>
 
 
 
               <div class="video  ">
-                <div class="d-flex wrapper">
+                <div class="d-flex wrapper mb-4">
                   <div class="video_parent one">
                     <iframe src="https://drive.google.com/file/d/1bm25hTA3GnGi7RW34wfHHS9QRpFQktLe/preview"  width="100%" height="200" allow="autoplay"></iframe>
                     <span>QuADPRO</span>
@@ -370,6 +476,10 @@
                     <iframe src="https://drive.google.com/file/d/1_taSN_m10YW1PeUsrsj4V9vmgdAi2f1v/preview" width="100%" height="200" allow="autoplay"></iframe>
                     <span>OP DASH</span>
                   </div>
+    
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="https://prime.depedncr.com.ph/" class="ref_button a quadpro ">Go to PR1ME Automation Systems</a>
     
                 </div>
               </div>
@@ -415,12 +525,27 @@
                 transform: translateY(0%);
               }
             }
-          </style>
-     
 
-          <div class="container border border-dark p-3 mb-5">
+            .ref_button.a.quadpro {
+                background: #ffcc00;
+                text-decoration: none;
+                cursor: pointer;
+                margin-top: 10px;
+                letter-spacing: 0.02em;
+                padding: 6px 15px;
+                color: white;
+                font-weight: bold;
+                transition: 0.3s ease;
+                font-size: 15px;
+            }
+            .ref_button.a.quadpro:hover{
+              color: #2b5b99 ;
+            }
+          </style>
+
+          <div class="container border p-3 mb-5">
             <div class=" text-center pb-2" >
-              <h3 class="m-0" style="font-size: 18px;">PR1ME Engagements</h3>
+              <h3 style="font-weight: bold; color: #F4BB00;" class="text-center ">PR1ME Engagements</h3>
   
             </div>
             <div class="">
@@ -449,29 +574,6 @@
                   <a class="m-0 qr-text me-3" href="https://docs.google.com/forms/d/e/1FAIpQLScn8NxMYLJI4O1imG_-cMhwNSf0I6pUtT7iXegLxjH5t573gg/viewform">What do you think of our website? We want to hear from you.</a>
                   <img class="qr" src="./img/contact/QAD i-Share Participation Tool.png" alt="">
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- footer -->
-          <div class="footer_header container-fluid">
-            <div class="container_system d-flex align-items-center">
-              <div class="image_system ">
-                <img src="./img/Prime Automation Logo ONLY.png" alt="">
-              </div>
-              <div class="center ">
-                <div class=" con">
-                  <img src="./img/QuADPRO.png" alt="">
-                </div>
-                <div class="con">
-                  <img src="./img/ISO syss.png" alt="">
-                </div>
-                <div class="con">
-                  <img src="./img/SFAST.png" alt="">
-                </div>
-                <div class="con">
-                  <img src="./img/OP DASHh.png" alt="">
-                </div>
-
               </div>
             </div>
           </div>
@@ -520,14 +622,9 @@
                     </div>
                   </div>
                 </div>
-                  <span class="last">
-                    <p>
-                      Managed by DepEd NCR Quality Assurance Division (QAD)
-                    </p>
-                    <p>
-                      LET QUALITY BE OUR IDENTITY
-                    </p>
-                  </span>
+                <span class="last">
+                  ©2022 Copyright Department of Education – National Capital Region, <strong>Quality Assurance Division </strong>. Let Quality Be Our Identity
+                </span>
               </div>
         </div>
     </div>

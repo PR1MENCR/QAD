@@ -128,3 +128,10 @@ const qad_logo = document.querySelector('#qad_logo')
 qad_logo.addEventListener('click', () => {
   window.location.href = "https://drive.google.com/drive/folders/1N2OgDctYVj1VV5QoZGfIPIyjObMohAJa"
 })
+
+
+const last = document.querySelector('.last')
+let divHTML = `
+©2022 Copyright Department of Education – National Capital Region, <strong>Quality Assurance Division </strong>. Let Quality Be Our Identity
+`
+last.innerHTML = divHTML
