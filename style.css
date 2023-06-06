@@ -76,8 +76,11 @@ html{
     font-weight: 500;
     pointer-events: none;
 }
-.main .mynav .navbar-nav .nav-item:nth-child(5),
-.main .mynav .navbar-nav .nav-item:nth-child(6){
+.main .mynav .navbar-nav .nav-item:nth-child(5)
+{
+    display: none;
+}
+.main .mynav .navbar-nav .nav-item:nth-child(6) #ref{
     display: none;
 }
 .main .mynav .navbar-nav .nav-item a{

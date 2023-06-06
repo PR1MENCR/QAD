@@ -32,83 +32,45 @@
      <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script> -->
 </head>
 <body >
-
-  <!-- <div class="accessibility_tools">
-    <div class="img_button">
-      <i class="fa fa-universal-access" aria-hidden="true"></i>
-    </div>
-    <div class="a_wrapper">
-      <h4>Accessibility Tools</h4>
-      <ul class="a_btn">
-        <li>Increase Text</li>
-        <li>Decrease Text</li>
-        <li>Grayscale</li>
-        <li>High Contrast</li>
-        <li>Negative Contrast</li>
-        <li>Light Background</li>
-        <li>Links Underline</li>
-        <li>Underline Font</li>
-        <li>Readable Font</li>
-        <li>Reset</li>
-      </ul>
-    </div>
-  </div> -->
-
-  <style>
-    .accessibility_tools{
-      z-index: 99;
-      position: fixed;
-      right: -200px;
-      top:33%;
-      background: #fff;
-      border: 1px solid #666666;
-      width: 200px;
-      transition: 0.3s;
-    }
-    .accessibility_tools .a_wrapper h4{
-      padding: 14px;
-      font-size: 20px;
-      margin: 0;
-    }
-    .accessibility_tools.active{
-      right: 0;
-    }
-    .accessibility_tools .img_button{
-      position: absolute;
-      padding: 5px;
-      background: #fff;
-      top: -1px;
-      left: -54px;
-      border: 1px solid #666666;
-      border-right: 1px solid #fff;
-      box-sizing: border-box;
-      background: #666666;
-      height: 55px;
-      width: 55px;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .accessibility_tools .img_button i{
-      font-size: 40px;
+    <style>
+        .ref h6{
+            /* margin-bottom: 40px; */
+        }
+        .title{
+            display: grid;
+            grid-template-columns: 50px 1fr;
+            grid-auto-flow: column;
+            font-weight: bold;
+        }
+        .title h6{
+            font-weight: bold;
+            grid-column: 2/3;
+        }
+        .content_ref{
+            margin-left: 30px;
+            display: grid;
+            grid-template-columns: 50px 1fr;
+        }
+        .content_ref h6{
+            margin-bottom: 30px;
+        }
+        .content_ref .numbe{
+            margin-top: 15px;
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: 373px 20px 1fr;
+        }
+        button{
+            background: #F4BB00;
+      text-decoration: none;
+      width: 120px;
+      height: 25px;
       color: #fff;
-    }
-    .accessibility_tools ul{
-  
-      padding-left: 0;
-      margin: 0;
-    }
-    .accessibility_tools li{
-      list-style: none;
-      padding: 6px 15px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .accessibility_tools li:hover{
-      background: #e9ecef;
-      /* color: #fff; */
-    }
+      text-align: center;
+      border: none;
+      outline: none;
+      margin-left: 20px;
+        }
   </style>
   <!-- banner -->
   <div id="particles-js">
@@ -237,7 +199,7 @@
                           </ul>
                         </div>
                       </li>
-                      <li class="nav-item ref dropdown me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
+                      <li class="nav-item dropdown me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
                         <a class="nav-link P-0" data-bs-toggle="collapse" data-bs-target="#ref" href="" id="navbarDarkDropdownMenuLink"aria-describedby="false">
                           References
                         </a>
@@ -294,272 +256,263 @@
             
           </nav>
           <div class="site-map d-flex px-4 my-3">
-            <p class="p-0">YOU ARE HERE. HOME</p>
+            <p class="p-0">YOU ARE HERE. REFERENCES</p>
           </div>
-          <!-- landing -->
-          <div class="container-fluid px-3 px-lg-5 pb-3">
-            <div id="slider" class=" my-3 my-md-0 mb-5 ">
-              <div class="container-fluid" style="margin-bottom: 40px;">
-                <div class="row">
-                  <div class="mb-5 mb-lg-0 p-0">
-                    <div data-ride="carousel" class="carousel slide" data-interval="3000" id="carousel-example-generic">
-                      <div class="carousel-indicators" style="position: absolute; bottom:-45px; ">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                      </div>
-                      <div class="carousel-inner">
-                        <div class="carousel-item active" style="transition: 0.3s ease;">
-                          <img src="./img/carousel/Slider1.png" class="d-block w-100 slider_landing" alt="...">
-                        </div>
-                        <div class="carousel-item" style="transition: 0.3s ease; ">
-                          <img  src="./img/carousel/Slider2.png" class="d-block w-100 slider_landing" alt="...">
-                        </div>
-                        <div class="carousel-item" style="transition: 0.3s ease;">
-                          <img src="./img/carousel/Slider3.png" class="d-block w-100 slider_landing" alt="...">
-                        </div>
-                        <div class="carousel-item" style="transition: 0.3s ease;">
-                          <img src="./img/carousel/Slider4.png" class="d-block w-100 slider_landing" alt="...">
-                        </div>
-                        <!-- <div class="carousel-item" style="transition: 0.3s ease;">
-                          <img src="./img/web banner 4.png" class="d-block w-100" alt="...">
-                        </div> -->
-                      </div>
-                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-  
-  
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-  
-  
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                      </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                      </button>
+
+          <div class="container p-3 border">
+              <div class="ref">
+                <h3 class="mb-0 text-center" style="color:#F4BB00;font-weight: bold;">Legal Bases and References</h3>
+                <h6  class="text-center mb-5">Effective as of: January 26, 2023</h6>
+                <div class="title">
+                    <span>I. </span>
+                    <h6>PROCESS: Organizational Development</h6>
+                    <h6>SUB-PROCESS: Organization Management</h6>
+                </div>
+                <div class="content_ref mt-3">
+                    <span class="letter">A</span>
+                    <div class="content">
+                        <h6>Regional Monitoring, Evaluation, and Adjustment - pRiMing up results-driven contributions in KPIs (RMEA plus)</h6>
+                        <div class="numbe">1. DepEd Order No. 029, s. 2022 <span>-</span>  Adoption of the Basic Education Monitoring and Evaluation Framework <button onclick="window.location.href='https://drive.google.com/file/d/1NvkD1sHruyiooqkz9eAW8y0hJfR70kdk/preview'">View</button></div>
+                        <div class="numbe mb-5">2. Republic Act No. 9155 <span>-</span> Governance of Basic Education Act of 2001 <button>View</button></div>
                     </div>
-                  </div>
+                </div>
+                <div class="content_ref">
+                    <span class="letter">B</span>
+                    <div class="content">
+                        <h6>Conduct of Quality Assurance, Monitoring and Evaluation (QAME) on Training Programs</h6>
+                        <div class="numbe">1. DepEd Order No. 29, s. 2022 <span>-</span>  Adoption of the Basic Education Monitoring and Evaluation Framework<button>View</button></div>
+                    </div>
                 </div>
               </div>
-            </div>
 
           </div>
-          <style>
-            .services .services_item{
-              display: grid;
-              grid-template-columns: 120px 1fr;
-              margin-bottom: 30px;
-            }
-            .services .services_item:nth-child(3){
-              margin-bottom: 0px;
-            }
-            .services .services_item img{
-              width: 80px;
-              height: auto;
-              /* object-fit: cover; */
-            }
-            .services .services_item h4{
-              color: #F4BB00;
-              font-weight: bold;
-            }
-            .services .services_item .services_right .grid{
-              display: grid;
-              grid-template-columns: 20px 1fr;
-
-            }
-            .services .services_item .services_right .grid i{
-              transform: translateY(5px);
-              font-size: 11px;
-            }
-            .services .services_item .services_right .grid span{
-              font-size: 15px;
-            }
-          </style>
-          <div class="container  mb-5 p-3 px-5 border">
-            <h3 style="font-weight: bold; color: #F4BB00;" class="text-center mb-4">Our Services</h3>
-            <div class="services">
-              <div class="services_item">
-                <img  src="./img/partners.png" alt="">
-                <div class="services_right">
-                  <h4> 
-                    Organization Development
-                  </h4>
-                  <div class="grid">
-                    <i class="fa fa-check" aria-hidden="true"></i>
-                    <span>Organizational Management (Regional Monitoring, Evaluation, and Adjustment - pRiMing up results-driven contributions in KPIs (RMEA plus)</span>
-                  </div>
-                  <div class="grid">
-                    <i class="fa fa-check" aria-hidden="true"></i>
-                    <span>Quality Assurance, Monitoring and Evaluation (QAME)</span>
-                  </div>
-                </div>
-              </div>
-              <div class="services_item">
-                <img onclick="window.location.href = 'https://drive.google.com/drive/folders/1Jz23-UnlfWwb7lRyFN7JoTJy_GH2DNST?usp=drive_link' " src="./img/education.png" alt="">
-                <div class="services_right">
-                  <h4> 
-                    Private Education Regulations and Development
-                  </h4>
-                  <div class="grid">
-                    <i class="fa fa-check" aria-hidden="true"></i>
-                    <span>Review and Development of Policies</span>
-                  </div>
-                  <div class="grid">
-                    <i class="fa fa-check" aria-hidden="true"></i>
-                    <span>Grant of Permits to Operate and Recognition
-                      <ul class="m-0">
-                        <li>Processing of Private Schools’ Applications for Government Authority (Government Permit: New and Renewal)</li>
-                        <li>Government Recognition</li>
-                        <li>Homeschooling Program</li>
-                        <li>Inclusive Special Education Program</li>
-                        <li>Open High School Program</li>
-                        <li>Re-Issuance of Government Recognition</li>
-                      </ul>
-                    </span>
-                  </div>
-                  <div class="grid">
-                    <i class="fa fa-check" aria-hidden="true"></i>
-                    <span>Grant of Special Orders (SO) of Private Schools/Technical Vocational Institutions (TVIs/Non-DepEd Public Schools)</span>
-                  </div>
-                  <div class="grid">
-                    <i class="fa fa-check" aria-hidden="true"></i>
-                    <span>Review and approval of Tuition and Other Fees Increase, No Increase and Proposed New Fees of Private Schools.</span>
-                  </div>
-                  <div class="grid">
-                    <i class="fa fa-check" aria-hidden="true"></i>
-                    <span>Government Assistance Subsidy</span>
-                  </div>
-                </div>
-              </div>
-              <div class="services_item">
-                <img src="./img/exam.png" alt="">
-                <div class="services_right">
-                  <h4> 
-                    Other Services
-                  </h4>
-                  <div class="grid">
-                    <i class="fa fa-check" aria-hidden="true"></i>
-                    <span>Facilitation on the Conduct of National Qualifying Examination for School Heads (NQESH)</span>
-                  </div>
-                  <div class="grid">
-                    <i class="fa fa-check" aria-hidden="true"></i>
-                    <span>Issuance of Regional Order for Establishment, Merging, Conversion, Naming/Renaming, Separation of Annexes in Public Schools</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- title home -->
-          <div class="container text-center pt-3 mb-5 border p-3" >
-            <h3 style="font-weight: bold; color: #F4BB00;" class="text-center ">DepEd-NCR PR1ME Automation <br/>lodged at the Quality Assurance Division (QAD)</h3>
-              <h3 style="font-size: 18px;" class="mb-5">A project of Regional Director Wilfredo E. Cabral, CESO III</h3>
-
-
-
-              <div class="video  ">
-                <div class="d-flex wrapper mb-4">
-                  <div class="video_parent one">
-                    <iframe src="https://drive.google.com/file/d/1bm25hTA3GnGi7RW34wfHHS9QRpFQktLe/preview"  width="100%" height="200" allow="autoplay"></iframe>
-                    <span>QuADPRO</span>
-                  </div>
-                  <div class="video_parent two">
-                    <iframe src="https://drive.google.com/file/d/1zT_Hg9Ce8Vg3Yj7IEoC2EqmrJh5x64dM/preview" width="100%" height="200" allow="autoplay"></iframe>
-                    <span>ISO SYS</span>
-                  </div>
-                  <div class="video_parent one">
-                    <iframe src="https://drive.google.com/file/d/1THrZxG6IwTMufYxda6aVTmRb5rhIfMDQ/preview" width="100%" height="200" allow="autoplay"></iframe>
-                    <span>PRIME SFAST</span>
-                  </div>
-                  <div class="video_parent two">
-                    <iframe src="https://drive.google.com/file/d/1_taSN_m10YW1PeUsrsj4V9vmgdAi2f1v/preview" width="100%" height="200" allow="autoplay"></iframe>
-                    <span>OP DASH</span>
-                  </div>
+          <div class="container p-3 border mt-4">
+              <div class="ref">
     
+                <div class="title">
+                    <span>II. </span>
+                    <h6>PROCESS: Private Education Regulations and Development</h6>
+                    <h6>SUB-PROCESS: Review and Development of Policies (QAD and Legal Unit)</h6>
                 </div>
-                <div class="d-flex justify-content-center">
-                  <a href="https://prime.depedncr.com.ph/" class="ref_button a quadpro ">Go to PR1ME Automation Systems</a>
-    
+                <div class="content_ref mt-3">
+                    <span class="letter"></span>
+                    <div class="content">
+                        <div class="numbe">1. DepEd Order No. 52, s. 2015 <span>-</span>  New Organizational Structures of the Central, Regional, and Schools Division Offices of the Department of Education <button>View</button></div>
+                        <div class="numbe">2. DepEd Order No. 13, s. 2015 <span>-</span> Establishment of a Policy Development Process at the Department of Education  <button>View</button></div>
+                        <div class="numbe">3. Republic Act No. 10173 <span>-</span> Data Privacy Act of 2012
+                            <button>View</button></div>
+                        <div class="numbe">4. Republic Act No. 9155 <span>-</span> Governance of Basic Education Act of 2001
+                            <button>View</button></div>
+                        <div class="numbe">5. Memorandum Circular 16-01 <span>-</span> Security of Personal Data in Government Agencies
+                            <button>View</button></div>
+                    </div>
                 </div>
               </div>
+
           </div>
-          <style>
-            .video .wrapper{
-              overflow: hidden;
-            }
-            .video_parent{
-
-              position: relative;
-              animation-delay: 1s;
-            }
-            .video_parent.one{
-              animation: moveOne 4s  infinite;
-              /* animation-delay: 4s; */
-            }
-            .video_parent.two{
-
-              animation: moveTwo 4s  infinite;
-            }
-            .video_parent span{
-              font-size: 12px;
-              position: absolute;
-              bottom: 20px;
-              left: 50%;
-              transform: translate(-50%,0);
-              color: #fff;
-            }
-            @keyframes moveOne {
-              0%{
-                transform: translateY(-100%);
-              }
-              100%{
-                transform: translateY(0%);
-              }
-            }
-            @keyframes moveTwo {
-              0%{
-                transform: translateY(100%);
-              }
-              100%{
-                transform: translateY(0%);
-              }
-            }
-
-            .ref_button.a.quadpro {
-                background: #ffcc00;
-                text-decoration: none;
-                cursor: pointer;
-                margin-top: 10px;
-                letter-spacing: 0.02em;
-                padding: 6px 15px;
-                color: white;
-                font-weight: bold;
-                transition: 0.3s ease;
-                font-size: 15px;
-            }
-            .ref_button.a.quadpro:hover{
-              color: #2b5b99 ;
-            }
-          </style>
-
-          <div class="container border p-3 mb-5">
-            <div class=" text-center pb-2" >
-              <h3 style="font-weight: bold; color: #F4BB00;" class="text-center ">PR1ME Engagements</h3>
-  
-            </div>
-            <div class="">
-    
-              <div class="fade_slider index  ">
-                <div class="fade_slider_content craw" style="background-image: url('./img/fade_transition/CRAW1.png');"></div>
-                <div class="fade_slider_content craw" style="background-image: url('./img/fade_transition/CRAW2.png');"></div>
-                <div class="fade_slider_content soft_launch" style="background-image: url('./img/fade_transition/Prime\ Automation1.png');"></div>
-                <div class="fade_slider_content soft_launch" style="background-image: url('./img/fade_transition/Prime\ Automation2.png');"></div>
-                <div class="fade_slider_content soft_launch" style="background-image: url('./img/fade_transition/Prime\ Automation3.png');"></div>
+          <div class="container p-3 border mt-4">
+              <div class="ref">
+                <div class="title">
+                    <span>III. </span>
+                    <h6>PROCESS: Private Education Regulations and Development</h6>
+                    <h6>SUB-PROCESS: Grant of Permits to Operate and Recognition</h6>
+                </div>
+                <div class="content_ref mt-3">
+                    <span class="letter"></span>
+                    <div class="content">
+                        <div class="numbe">1. DepEd Order No. 041, s. 2022<span>-</span>Amendment to DepEd Order No. 88 s. 2010<button>View</button></div>
+                        <div class="numbe">2. DepEd Order No. 040, s. 2022 <span>-</span>Amendment to DepEd Order No. 047, s. 2016 (Omnibus Policy on Kindergarten Education)<button>View</button></div>
+                        <div class="numbe">3. DepEd Order No. 001, s. 2022 <span>-</span> Revised Policy Guidelines on Homeschooling Program<button>View</button></div>
+                        <div class="numbe">4. DepEd Order No. 44, 2021<span>-</span> Policy Guidelines on the Provision of Educational Programs and Services for Learners with Disabilities in the K To 12 Basic Education Program
+                            <button>View</button></div>
+                        <div class="numbe">5. DepEd Order No. 021, s. 2019 <span>-</span> Policy Guidelines on the K to 12 Basic Education Program
+                            <button>View</button></div>
+                        <div class="numbe">6. DepEd Order No. 64, s. 2017 <span>-</span> Establishing the minimum Performance Standards and Specifications for DepEd School Bldg.
+                            <button>View</button></div>
+                        <div class="numbe">7. DepEd Order No. 47, s. 2016<span>-</span> Omnibus Policy on Kindergarten Education
+                            <button>View</button></div>
+                        <div class="numbe">8. DepEd Memorandum No. 4, s. 2014<span>-</span>Guidelines on the Preparation for the National Implementation of the Senior High School (SHS) Program in Non- DepEd Schools for the School Year (SY) 2016 – 2017 and onwards
+                            <button>View</button></div>
+                        <div class="numbe">9. DepEd Order No. 43, s. 2013<span>-</span>Implementing Rules and Regulations (IRR) of Republic Act No. 10533 otherwise known as the enhanced basic education act of 2013
+                            <button>View</button></div>
+                        <div class="numbe">10. DepEd Order No. 11, s. 2011<span>-</span>Amendments to the 2010 Revised Manual of Regulations for Private Schools in Basic Education.
+                            <button>View</button></div>
+                        <div class="numbe">11. DepEd Order No. 88, s. 2010<span>-</span>2010 Revised Manual of Regulations for Private Schools in Basic Education
+                            <button>View</button></div>
+                        <div class="numbe">12.	DepEd Order No. 46, s. 2006<span>-</span>Guidelines on the Pilot Implementation of the Open High School Program (OHSP)
+                            <button>View</button></div>
+                        <div class="numbe">13.	DepEd Order No. 26, s. 1997<span>-</span>Institutionalization of SPED Programs in all Schools
+                            <button>View</button></div>
+                        <div class="numbe">14.	Republic Act. No. 10754<span>-</span>An Act Expanding the Benefits and Privileges of Persons with Disability (PWD)
+                            <button>View</button></div>
+                        <div class="numbe">15.	Republic Act No. 10533<span>-</span>The Enhanced Basic Education Act of 2013
+                            <button>View</button></div>
+                        <div class="numbe">16.	Republic Act. No. 9442<span>-</span>An Act Amending RA 7277 otherwise known as the “Magna Carta for Disabled Persons and Other Purposes
+                            <button>View</button></div>
+                        <div class="numbe">17.	Republic Act No. 9155<span>-</span>Governance of Basic Education Act of 2001
+                            <button>View</button></div>
+                        <div class="numbe">18.	Republic Act No. 8799<span>-</span>The Securities Regulation Code
+                            <button>View</button></div>
+                        <div class="numbe">19.	Republic Act No. 7277<span>-</span>Magna Cart for Disabled Persons, and for Other Purposes
+                            <button>View</button></div>
+                        <div class="numbe">20.	Batas Pambansa Blg. 344<span>-</span>Accessibility Law
+                            <button>View</button></div>
+                        <div class="numbe">21.	Batas Pambansa Blg. 232<span>-</span>An Act Providing for the Establishment and Maintenance of an Integrated System of Education Act of 1982
+                            <button>View</button></div>
+                        <div class="numbe">21.	Batas Pambansa Blg. 232<span>-</span>An Act Providing for the Establishment and Maintenance of an Integrated System of Education Act of 1982
+                            <button>View</button></div>
+                        <div class="numbe">22.	Batas Pambansa 66<span>-</span>The Corporation Code of the Philippines
+                            <button>View</button></div>
+                    </div>
+                </div>
               </div>
-            </div>
-  
+
           </div>
+          <div class="container p-3 border mt-4">
+              <div class="ref">
+    
+                <div class="title">
+                    <span>IV. </span>
+                    <h6>PROCESS:  Private Education Regulations and Development</h6>
+                    <h6>SUB-PROCESS: Grant of Special Orders (SO) of Private Schools / Technical Vocational Institutions (TVIs/Non-DepEd Public Schools) </h6>
+                </div>
+                <div class="content_ref mt-3">
+                    <span class="letter"></span>
+                    <div class="content">
+                        <div class="numbe">1.	Regional Memorandum No. NCR 797, s. 2022<span>-</span>Implementation of ISO Sys v. 2.0 in HEIs and Tech-Voc Schools Starting SY 2022-2023<button>View</button></div>
+                        <div class="numbe">2.	Regional Memorandum No. NCR 684, s. 2022 <span>-</span>Information Update for SHS Program Implementers and Reiteration of Guidelines for the Issuance of Special Order for SY 2022-2023<button>View</button></div>
+                        <div class="numbe">3.	Regional Memorandum No. 469, s. 2021 <span>-</span>Data and Infrastructure Requirements of SO System v. 1.0<button>View</button></div>
+                        <div class="numbe">4.	Regional Memorandum No. 259, s. 2021<span>-</span>Special Order (SO) System Systems Analysis of  School/Division/Regional Process<button>View</button></div>
+                        <div class="numbe">5.	Republic Act No. 11032  <span>-</span>Ease of Doing Business and Efficient Government Service Delivery Act of 2018
+                            <button>View</button></div>
+                        <div class="numbe">6.	DepEd Order No. 10, s. 2018 <span>-</span>Guidelines on the Issuance of Special Orders for the Approval of the Eligibility for Graduation from Senior High School of Grade 12 Learners Enrolled in Private Schools/Colleges and Technical-Vocational Institutions (TVIs) for School Year (SY) 2017-2018
+                            <button>View</button></div>
+                        <div class="numbe">7.	DepEd Order No. 88, s. 2010, Sec. 150<span>-</span> 2010 Revised Manual of Regulations for Private Schools in Basic Education
+                            <button>View</button></div>
+                        <div class="numbe">8.	DepEd Order No. 114, s. 1991<span>-</span>Additional Guidelines on the Issuance of Special Orders for Graduation
+                            <button>View</button></div>
+                        <div class="numbe">9.	MECS Order No. 48, s. 1986<span>-</span>Classification of Higher Education program and Code Systems for Special Orders and Certifications
+                            <button>View</button></div>
+                    </div>
+                </div>
+              </div>
+
+          </div>
+          <div class="container p-3 border mt-4">
+              <div class="ref">
+                <div class="title">
+                    <span>V. </span>
+                    <h6>PROCESS:  Private Education Regulations and Development</h6>
+                    <h6>SUB-PROCESS: Acknowledgement of Private School Voluntary (Temporary/Permanent Closure) </h6>
+                </div>
+                <div class="content_ref mt-3">
+                    <span class="letter"></span>
+                    <div class="content">
+                        <div class="numbe">1.	DepEd Order No. 11, s. 2011<span>-</span>Amendments to the 2010 Revised Manual of Regulations for Private Schools in Basic Education<button>View</button></div>
+                        <div class="numbe">2.	DepEd Order No. 88, s. 2010    <span>-</span>2010 Revised Manual of Regulations for Private Schools in Basic Education<button>View</button></div>
+                    </div>
+                </div>
+              </div>
+
+          </div>
+          <div class="container p-3 border mt-4">
+              <div class="ref">
+    
+                <div class="title">
+                    <span>VI. </span>
+                    <h6>PROCESS: Private Education Regulations and Development</h6>
+                    <h6>SUB-PROCESS: Acknowledgement of Private School Voluntary (Temporary/Permanent Closure) </h6>
+                </div>
+                <div class="content_ref mt-3">
+                    <span class="letter"></span>
+                    <div class="content">
+                        <div class="numbe">1.	Regional Memorandum No. 708, s. 2022<span>-</span>Reiteration on DepEd Order No. 12, s. 1997 on Submission of Tuition and Other School Fees Application<button>View</button></div>
+                        <div class="numbe">2.	DepEd    Memorandum No. 007, s. 2022<span>-</span>Adjustment to the Period of consultation and Application for Changes in Tuition and Other School Fees by Private Educational Institutions in Light of the Adjusted School Calendar for School Year 2022-2023<button>View</button></div>
+                        <div class="numbe">3.	 DepEd Citizen’s Charter, Sec. 2 of the RA 11032  <span>-</span>Ease of Doing Business and Efficient Government Service Delivery (EOBD-EGSD) Act of 2018<button>View</button></div>
+                        <div class="numbe">4.	DepEd Order No. 11, s. 2011<span>-</span>Amendments to the 2010 Revised Manual of Regulations for Private Schools in Basic Education<button>View</button></div>
+                        <div class="numbe">5.	 DepEd Order No. 88, s. 2010   <span>-</span>2010 Revised Manual of Regulations for Private Schools in Basic Education<button>View</button></div>
+                        <div class="numbe">6.	DepEd Order No. 18, s. 2009<span>-</span>Tuition Fees in Private Schools<button>View</button></div>
+                        <div class="numbe">7.	RA 9485 <span>-</span>Anti-Red Tape Act of 2007<button>View</button></div>
+                        <div class="numbe">8.	DepEd Order No. 12, s. 1997<span>-</span>Amendments to DECS Order No. 21, s. 1993, No. 21-A, s. 1993 and No. 20 s. 1994<button>View</button></div>
+                        <div class="numbe">9.	RA 6728 Amended by RA 8545 (June 10, 1989)<span>-</span>An Act Providing Government Assistance to Students and Teachers in Private Education, and Appropriating Funds Therefor (Sec.10 Consultation)<button>View</button></div>
+                        <div class="numbe">10.	Batas Pambansa Blg. 232 (1982)<span>-</span>Also known as the "Education Act of 1982" An Act Providing for the Establishment and Maintenance of an Integrated System of Education. (Sec 42).<button>View</button></div>
+                        <div class="numbe">11.	PD No. 451, s. 1974          <span>-</span>Authorizing the Secretary of Education and Culture to regulate the imposition of tuition and other school fees, repealing Republic Act No. 6139, and other purposes.<button>View</button></div>
+                    </div>
+                </div>
+              </div>
+
+          </div>
+          <div class="container p-3 border mt-4">
+              <div class="ref">
+                <div class="title">
+                    <span>VII. </span>
+                    <h6>PROCESS: PRIVATE EDUCATION REGULATIONS AND 
+                        DEVELOPMENT   
+                       </h6>
+                    <h6>SUB-PROCESS: Government Assistance Subsidy</h6>
+                </div>
+                <div class="content_ref mt-3">
+                    <span class="letter"></span>
+                    <div class="content">
+                        <div class="numbe">1. DepEd Order No. 32  
+                            series of 2022<span>-</span>Guidelines on Eligibility and Application for the Senior High School Voucher Program for School Year 2022-2023.<button>View</button></div>
+                        <div class="numbe">2. DepEd Order No. 016    
+                            series of 2020<span>-</span>Eligibility and Application for the Senior High School Voucher Program (SHS VP)<button>View</button></div>
+                        <div class="numbe">3. Republic Act No. 8545  <span>-</span>An Act Amending Republic Act No. 6728, Otherwise
+                            Known As "An Act Providing Government
+                            Assistance To Students And Teachers In
+                            Private Education And Appropriating Funds
+                            Therefor," Establishing A Fund For The
+                            Purpose Of Subsidizing Salaries Of Private
+                            School Teachers, And Appropriating Funds
+                            Therefor
+                            <button>View</button></div>
+                        <div class="numbe">Republic Act 6728<span>-</span>Government Assistance to Students and Teachers In Private Education Act<button>View</button></div>
+                        <div class="numbe">5. Executive Order No. 
+                            150 series of 1994
+                        <span>-</span>Amending Executive Order No. 156, series of 1968, as Amended by Executive Order No. 163, Series of 1968, Constituting The "Fund For Assistance To Private Education" As An Irrevocable Trust, Creating A "Private
+                        Education Assistance Committee" As Trustee, and Providing for the Agreement Thereof
+                        <button>View</button></div>
+                        <div class="numbe">6. Executive Order (E.O.) 
+                            No. 156 series of 1968
+                        <span>-</span>Constituting the Fund for Assistance to Private Education as an Irrevocable Fund, creating a Private Education Assistance Committee as Truster and providing for the Management. <button>View</button></div>
+                    </div>
+                </div>
+              </div>
+
+          </div>
+          <div class="container p-3 border mt-4 mb-5">
+              <div class="ref">
+                <div class="title">
+                    <span>VIII. </span>
+                    <h6 class="mb-0">QAD OTHER PROCESSES   
+                       </h6>
+                </div>
+                <div class="content_ref mt-3">
+                    <span class="letter">A</span>
+                    <div class="content">
+                        <h6>Name of Process: Facilitation on the Conduct of National Qualifying Examination for School Heads (NQESH)</h6>
+                        <div class="numbe">1.	DepEd Memorandum No. 033 s. 2022 <span>-</span> Conduct of the 2021 National Qualifying Examination for School Heads <button>View</button></div>
+                        <div class="numbe ">2.	DepEd Order No. 24 s. 2020 <span>-</span>National Adoption and Implementation of the Philippine Professional Standards for School Heads<button>View</button></div>
+                        <div class="numbe ">3.	DepEd Order No. 97 s. 2011 <span>-</span>Revised Guidelines on the Allocation and Reclassification of School Head Positions<button>View</button></div>
+                        <div class="numbe ">4.	DepEd Order No. 41 s. 2016 <span>-</span>Additional Guidelines to DepEd Order No. 19, S. 2016 (Guidelines on the Organizational Structures and Staffing Patterns of Stand-Alone and Integrated Public Senior High Schools (SHS)<button>View</button></div>
+                        <div class="numbe ">5.	DepEd Order No. 42 s. 2007<span>-</span>The Revised Guidelines on Selection, Promotion and Designation of School Heads<button>View</button></div>
+                    </div>
+                </div>
+                <div class="content_ref mt-3">
+                    <span class="letter">B</span>
+                    <div class="content">
+                        <h6>Issuance of Regional Order for Establishment, Merging, Conversion, Naming/Renaming, Separation of Annexes in Public Schools</h6>
+                        <div class="numbe">1.	DepEd Order No. 64, s. 2017 <span>-</span>Establishing the Minimum Performance Standards and Specifications (MPSS) for DepEd School Buildings<button>View</button></div>
+                        <div class="numbe">2.	DepEd Order No. 35, s. 2017 <span>-</span>Revised Guidelines on the Implementation of the Basic Educational Facilities Fund<button>View</button></div>
+                        <div class="numbe">3.	DepEd Order No. 51, s. 2015 <span>-</span>Guidelines on the Implementation of the SHS Program in Existing Public JHSs and ISs, Establishment of Stand-Alone Public SHSs, and Conversion of Existing Public Elementary and JHSs Into Stand-Alone SHSs<button>View</button></div>
+                        <div class="numbe">4.	DepEd Order No. 40, s. 2014<span>-</span>Establishment, Merging, Conversion, and Naming /Renaming of Public Schools, and Separation of Public-School Annexes in Basic Education<button>View</button></div>
+                    </div>
+                </div>
+              </div>
+
+          </div>
+
         
           <div class="footer_start container-fluid" style="background: #e9ecef;">
             <div class="container py-4 text-center">

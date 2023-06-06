@@ -128,7 +128,16 @@ const qad_logo = document.querySelector('#qad_logo')
 qad_logo.addEventListener('click', () => {
   window.location.href = "https://drive.google.com/drive/folders/1N2OgDctYVj1VV5QoZGfIPIyjObMohAJa"
 })
+const referenceNav = document.querySelectorAll('.nav-item')
+referenceNav.forEach((i,index) => {
+  i.addEventListener('click', () => {
+    console.log(index)
+    if(index == 5){
+      window.location.href = "../references.html"
+    }
 
+  })
+});
 
 const last = document.querySelector('.last')
 let divHTML = `
