@@ -328,8 +328,40 @@
             <div class="container pt-4 pb-4 border ">
               <h3 class="mb-4 text-center" style="color:#F4BB00;font-weight: bold;">QAD Monthly Statistics Report</h3>
                   
-              <div class="row " style="max-width: 900px; margin:0 auto;">
-                <div class="col-md-6">
+              <div class="row " style="">
+                <div class="col-md-4">
+                  <div class="link">
+                    <div class="image data">
+                      <div class="data-content">May 2023</div>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1QK41ggFKG8YTkmKGnNvBB81idmNQWBiL/preview">View</a>
+                  </div>
+                  <div class="link">
+                    <div class="image data">
+                      <div class="data-content">April 2023</div>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1KwFPQ8NkCssFj2sQto_20gBvAHgU01W7/preview">View</a>
+                  </div>
+                  <div class="link">
+                    <div class="image data">
+                      <div class="data-content">March 2023</div>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1FVmJIiVI6i_E04Jb46IYmm3tMrmgJGPx/preview">View</a>
+                  </div>
+                  <div class="link">
+                    <div class="image data">
+                      <div class="data-content">February 2023</div>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1Z0ABs1cL5myNLcZWRQHYVvQAk3l5ypUP/preview">View</a>
+                  </div>
+                  <div class="link">
+                    <div class="image data">
+                      <div class="data-content">January 2023</div>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1SIsv0mJaKHoy9JAo7LwAUpO-GwDfYlN0/preview">View</a>
+                  </div>
+                </div>
+                <div class="col-md-4">
                   <div class="link">
                     <div class="image data">
                       <div class="data-content">December 2022</div>
@@ -368,7 +400,7 @@
                   </div>
 
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                   <div class="link" >
                     <div class="image data">
                       <div class="data-content">June 2022</div>
@@ -416,31 +448,37 @@
           <div class="container-fluid mt-4 mb-5">
             <div class="container pt-4 pb-4 border ">
               <h3 class="mb-4 text-center" style="color:#F4BB00;font-weight: bold;">Processed Government Permit and Recognition</h3>
-              <div class="row" style="max-width: 900px; margin:0 auto;">
-                <div class="col-md-6">
+              <div class="row d-flex justify-content-center" style="max-width: 377px; margin:0 auto;">
+                <div class="col-md-12">
+                  <div class="link" >
+                    <div class="image data">
+                      <div class="data-content">May 2023</div>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1LVlUvK91B0IPq-mqR9jWNichstXAfDkw/preview">View</a>
+                  </div>
                   <div class="link" >
                     <div class="image data">
                       <div class="data-content">April 2023</div>
                     </div>
-                    <a href="https://drive.google.com/file/d/1fnjxJRRGqt3ZGYig8s1YrYrms3cvUpoA/preview">View</a>
+                    <a href="https://drive.google.com/file/d/1YKFpuI_ysxVQK028xOo4CzF12DIpOR9x/preview">View</a>
                   </div>
                   <div class="link" >
                     <div class="image data">
                       <div class="data-content">March 2023</div>
                     </div>
-                    <a href="https://drive.google.com/file/d/1vVXGJhBhAyw7TMMlG_Ip49-qCsIdt7IH/preview">View</a>
+                    <a href="https://drive.google.com/file/d/1dpMMAFu3NB-sG30t850IO3j798NqVmKT/preview">View</a>
                   </div>
                   <div class="link" >
                     <div class="image data">
                       <div class="data-content">February 2023</div>
                     </div>
-                      <a href="https://drive.google.com/file/d/1s4rWR3wZcuNkZyzxbHj60WNWhSdOpDyq/preview">View</a>
+                      <a href="https://drive.google.com/file/d/151zXfLkE_uanB6f5R94tsBz5FSBYvsDT/preview">View</a>
                   </div>
                   <div class="link" >
                     <div class="image data">
                       <div class="data-content">January 2023</div>
                     </div>
-                      <a href="https://drive.google.com/file/d/14ZxKowfICf-YwfkjY1VtG1eOSKBaucCT/preview">View</a>
+                      <a href="https://drive.google.com/file/d/1cKs3aRiLW7BaTbtT5m62wLxWSjqhF8Fu/preview">View</a>
                   </div>
                   <div class="link" >
                     <div class="image data">
@@ -556,26 +594,7 @@
 
   const statistic_img = document.querySelectorAll('.statistic_img')
   const main = document.querySelector('.main')
-  statistic_img.forEach(i => {
-    i.addEventListener('click', (e) => {
-      let factsmodal = document.createElement('div')
-      var factsmodalhtml = `
-      <div class="img-container">
-            <img src="${e.target.src}" alt="">
-          </div>
-      `
-      console.log()
-      factsmodal.classList.add('facts_modal')
-      factsmodal.innerHTML = factsmodalhtml
-      main.append(factsmodal)
-
-      factsmodal.addEventListener('click', (e) => {
-        if(e.target.classList.contains('facts_modal')){
-            main.removeChild(factsmodal)
-        }
-      })
-    })
-  })
+ 
   
   </script>
 <!-- <script src="./fb.js"></script> -->
