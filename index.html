@@ -55,6 +55,30 @@
   </div> -->
 
   <style>
+    .view{
+      background: #F4BB00;
+    text-decoration: none;
+    width: 179px;
+    height: 25px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    }
+    .view.apply{
+      width: 100px;
+    }
+    .li_wrapp{
+      display: flex;
+    }
+    
+    .li_wrapp li{
+      flex: 1;
+    }
+    .li_wrapp button:nth-child(3){
+      margin-left: 10px;
+    }
     .accessibility_tools{
       z-index: 99;
       position: fixed;
@@ -410,12 +434,36 @@
                     <i class="fa fa-check" aria-hidden="true"></i>
                     <span>Grant of Permits to Operate and Recognition
                       <ul class="m-0">
-                        <li>Processing of Private Schools’ Applications for Government Authority (Government Permit: New and Renewal)</li>
-                        <li>Government Recognition</li>
-                        <li>Homeschooling Program</li>
-                        <li>Inclusive Special Education Program</li>
-                        <li>Open High School Program</li>
-                        <li>Re-Issuance of Government Recognition</li>
+                        <div class="li_wrapp mt-3">
+                          <li>Processing of Private Schools’ Applications for Government Authority (Government Permit: New and Renewal) </li>
+                          <!-- <button class="view">View equirements</button>
+                          <button class="view apply">Apply</button> -->
+                        </div>
+                        <div class="li_wrapp mt-3">
+                          <li>Government Recognition</li>
+                          <!-- <button class="view">View equirements</button>
+                          <button class="view apply">Apply</button> -->
+                        </div>
+                        <div class="li_wrapp mt-3">
+                          <li>Homeschooling Program</li>
+                          <!-- <button class="view">View equirements</button>
+                          <button class="view apply">Apply</button> -->
+                        </div>
+                        <div class="li_wrapp mt-3">
+                          <li>Inclusive Special Education Program</li>
+                          <!-- <button class="view">View equirements</button>
+                          <button class="view apply">Apply</button> -->
+                        </div>
+                        <div class="li_wrapp mt-3">
+                          <li>Open High School Program</li>
+                          <!-- <button class="view">View equirements</button>
+                          <button class="view apply">Apply</button> -->
+                        </div>
+                        <div class="li_wrapp mt-3 mb-3">
+                          <li>Re-Issuance of Government Recognition</li>
+                          <!-- <button class="view">View equirements</button>
+                          <button class="view apply">Apply</button> -->
+                        </div>
                       </ul>
                     </span>
                   </div>
