@@ -133,7 +133,7 @@ referenceNav.forEach((i,index) => {
   i.addEventListener('click', () => {
     console.log(index)
     if(index == 5){
-      window.location.href = "../references.html"
+      window.location.href = "./references.html"
     }
 
   })
