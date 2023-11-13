@@ -612,7 +612,7 @@ canvas{display:block;vertical-align:bottom}
     font-size: 12px;
     color: #fff;
  }
-.fade_slider_content{
+.fade_slider_content,.fade_slider_content_one{
     position: absolute;
     top: 0;
     left: 0;

@@ -247,12 +247,18 @@
           <div class="container  magazine ">
             <div class="  border p-3">
               <h3 class="me-3 text-center" style="font-weight: bold; font-size:24px;">2023</h3>
-              <img src="./img/magazine/Slider 4.png" alt="">
+              <div class="fade_slider container" style="height: 380px;">
+                <div class="fade_slider_content_one" style="background-image: url('./img/magazine/Slider 5.png');"></div>
+                <div class="fade_slider_content_one" style="background-image: url('./img/magazine/Slider 4full.png');"></div>
+    
+              </div>
+              <!-- <img src="./img/magazine/Slider 4full.png" alt="">
+              <img src="./img/magazine/Slider 5.png" alt=""> -->
               <!-- <div class="" style="background-image: url('./img/magazine/Slider\ 4.png');"></div> -->
             </div>
 
             <div class="mb-4 mt-4 border p-3">
-              <h3 class="me-3 text-center" style="font-weight: bold; font-size:24px;">2024</h3>
+              <h3 class="me-3 text-center" style="font-weight: bold; font-size:24px;">2022</h3>
             <div class="fade_slider container" style="height: 380px;">
             <div class="fade_slider_content" style="background-image: url('./img/magazine/Slider\ 1.png');"></div>
             <div class="fade_slider_content" style="background-image: url('./img/magazine/Slider\ 2.png');"></div>
@@ -411,7 +417,29 @@ function showSlides() {
     setTimeout(showSlides, 3000); // Change image every 2 seconds
 }
 }
+  function slideshowone() {
 
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.querySelectorAll(".fade_slider_content_one");
+    console.log(slides)
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.visibility = "hidden";
+        slides[i].style.opacity = 0;
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1
+    }
+    slides[slideIndex-1].style.visibility = "visible";
+    slides[slideIndex-1].style.opacity = 1;
+    setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+}
+slideshowone()
 slideshow();
   
   </script>
